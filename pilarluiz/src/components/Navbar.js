@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { Button } from "./Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCow, faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -30,10 +32,13 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            TRVL <i className="fab fa-typo3" />
+            TRVL <FontAwesomeIcon icon={faCow} className="fa-cow" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
+            <FontAwesomeIcon
+              icon={click ? faTimes : faBars}
+              className={click ? "fa-times" : "fa-bars"}
+            />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">

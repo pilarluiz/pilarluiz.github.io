@@ -2,6 +2,15 @@ import React from "react";
 import "./Footer.css";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCow } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faYoutube,
+  faTwitter,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
@@ -65,7 +74,7 @@ function Footer() {
           <div class="footer-logo">
             <Link to="/" className="social-logo">
               TRVL
-              <i class="fab fa-typo3" />
+              <FontAwesomeIcon icon={faCow} />
             </Link>
           </div>
           <small class="website-rights">TRVL © 2020</small>
@@ -76,7 +85,7 @@ function Footer() {
               target="_blank"
               aria-label="Facebook"
             >
-              <i class="fab fa-facebook-f" />
+              <FontAwesomeIcon icon={faFacebook} />
             </Link>
             <Link
               class="social-icon-link instagram"
@@ -84,7 +93,7 @@ function Footer() {
               target="_blank"
               aria-label="Instagram"
             >
-              <i class="fab fa-instagram" />
+              <FontAwesomeIcon icon={faInstagram} />
             </Link>
             <Link
               class="social-icon-link youtube"
@@ -92,7 +101,7 @@ function Footer() {
               target="_blank"
               aria-label="Youtube"
             >
-              <i class="fab fa-youtube" />
+              <FontAwesomeIcon icon={faYoutube} />
             </Link>
             <Link
               class="social-icon-link twitter"
@@ -100,7 +109,7 @@ function Footer() {
               target="_blank"
               aria-label="Twitter"
             >
-              <i class="fab fa-twitter" />
+              <FontAwesomeIcon icon={faTwitter} />
             </Link>
             <Link
               class="social-icon-link twitter"
@@ -108,7 +117,7 @@ function Footer() {
               target="_blank"
               aria-label="LinkedIn"
             >
-              <i class="fab fa-linkedin" />
+              <FontAwesomeIcon icon={faLinkedinIn} />
             </Link>
           </div>
         </div>

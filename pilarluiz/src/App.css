@@ -77,10 +77,10 @@
   background-color: #f3a73c;
   font-family: "Voltaire", sans-serif;
   font-size: 18px;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   width: 100%;
   border: none;
-  height: 40px;
+  height: 45px;
 }
 
 button {
@@ -163,8 +163,8 @@ button {
   font-family: "Voltaire", sans-serif;
   font-size: 20px;
   padding-bottom: 20px;
-  letter-spacing: 1px;
-  line-height: 130%;
+  letter-spacing: 2px;
+  line-height: 135%;
 }
 
 /* @media (min-width: 640px) {
@@ -179,4 +179,53 @@ button {
     /* grid-template-columns: repeat(6, 1fr); */
     grid-template-columns: repeat(12, 1fr);
   }
+}
+
+.contact-container .green-triangle {
+  /* background-color: #4a6541; */
+  /* width: 20%;
+  height: 300px; */
+  /* transform: rotate(350deg); */
+  border-bottom: 100px solid #4a6541;
+  border-left: 500px solid transparent;
+}
+
+.contact-container .green-rectangle {
+  background-color: #4a6541;
+  height: 100px;
+  width: 500px;
+}
+
+.contact-container {
+  /* position: absolute;
+  right: 0;
+  top: 100px; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem; */
+}
+
+.contact-container .contact {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-family: "Vidaloka", serif;
+  padding: 10px;
+}
+
+.contact-container h2 {
+  font-family: "Vidaloka", serif;
+  line-height: 150%;
+  letter-spacing: 5px;
+}
+
+.contact-container h3 {
+  font-family: "Vidaloka", serif;
+  letter-spacing: 2px;
+  line-height: 160%;
+}
+
+.fa-location-dot {
+  padding-right: 10px;
 }

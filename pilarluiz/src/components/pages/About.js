@@ -1,7 +1,11 @@
 import React from "react";
 import "../../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faStar,
+  faCircle,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function About() {
   return (
@@ -20,6 +24,26 @@ export default function About() {
               on physical products that blend engineering disciplines.
             </p>
             <button className="linkedin">linkedin.com/in/pilarluiz</button>
+          </div>
+        </div>
+        <div className="contact-container">
+          {/* <span className="green-triangle"></span>
+          <span className="green-rectangle"></span> */}
+          {/* <img
+              // src="images/pilar-headshot.png"
+              alt="Pilar Headshot"
+              className=""
+            /> */}
+          <div className="contact">
+            <h2>Contact</h2>
+            <h3>
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                className="fa-loaction-dot"
+              />
+              Los Angeles, CA
+            </h3>
+            <h3>pilarluiz13 [at] gmail [dot] com</h3>
           </div>
         </div>
         <div className="green-section">

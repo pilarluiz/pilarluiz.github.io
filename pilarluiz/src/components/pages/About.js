@@ -49,18 +49,14 @@ export default function About() {
         <div className="education-skills-container">
           <div className="education-container">
             <h1 className="education">Education</h1>
-            <div className="university-container">
-              <div className="year-container">
-                <h2 className="years">2019 - 2023</h2>
-              </div>
-              <div className="university-degree-container">
-                <h3 className="university">
-                  University of Southern California
-                </h3>
-                <h4 className="degree">
-                  B.S. Computer Engineering & Computer Science
-                </h4>
-              </div>
+            <div className="year-container">
+              <h2 className="years">2019 - 2023</h2>
+            </div>
+            <div className="university-degree-container">
+              <h3 className="university">University of Southern California</h3>
+              <h4 className="degree">
+                B.S. Computer Engineering & Computer Science
+              </h4>
             </div>
           </div>
           <div className="skills-container">

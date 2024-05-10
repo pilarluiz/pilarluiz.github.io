@@ -46,16 +46,24 @@ export default function About() {
             <h3>pilarluiz13 [at] gmail [dot] com</h3>
           </div>
         </div>
-        <div className="green-section">
-          <div className="education">
-            <h1>Education</h1>
-            <h2>2019 - 2023</h2>
-            <h3>University of Southern California</h3>
-            <h4>
-              <i>B.S. Computer Engineering & Computer Science</i>
-            </h4>
+        <div className="education-skills-container">
+          <div className="education-container">
+            <h1 className="education">Education</h1>
+            <div className="university-container">
+              <div className="year-container">
+                <h2 className="years">2019 - 2023</h2>
+              </div>
+              <div className="university-degree-container">
+                <h3 className="university">
+                  University of Southern California
+                </h3>
+                <h4 className="degree">
+                  B.S. Computer Engineering & Computer Science
+                </h4>
+              </div>
+            </div>
           </div>
-          <div className="skills">
+          <div className="skills-container">
             <h1>Skills</h1>
             <div className="skill">C/C++</div>
             <div className="skill">Python</div>

@@ -60,11 +60,13 @@ export default function About() {
             </div>
           </div>
           <div className="skills-container">
-            <h1>Skills</h1>
-            <div className="skill">C/C++</div>
-            <div className="skill">Python</div>
-            <div className="skill">ROS</div>
-            <div className="skill">IoT</div>
+            <h1 className>Skills</h1>
+            <div className="skills">
+              <div className="skill">C/C++</div>
+              <div className="skill">Python</div>
+              <div className="skill">ROS</div>
+              <div className="skill">IoT</div>
+            </div>
           </div>
         </div>
         <div className="experience">

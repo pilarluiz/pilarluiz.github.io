@@ -68,6 +68,13 @@ export default function About() {
               <div className="skill">IoT</div>
             </div>
           </div>
+          <div className="research-container">
+            <h1>Research</h1>
+            <div className="research-paper">
+              MRNAV: Multi-Robot Aware Planning and Control Stack for Collision
+              and Deadlock-free Navigation in Cluttered Environments
+            </div>
+          </div>
         </div>
         <div className="experience-container">
           <h1>Experience</h1>
@@ -102,13 +109,6 @@ export default function About() {
           </div>
         </div>
         <div className="bottom">
-          <div className="research">
-            <h1>Research</h1>
-            <div className="research-paper">
-              MRNAV: Multi-Robot Aware Planning and Control Stack for Collision
-              and Deadlock-free Navigation in Cluttered Environments
-            </div>
-          </div>
           <div className="undergrad-involvement">
             <h1>Undergraduate Involvement</h1>
             <ul>

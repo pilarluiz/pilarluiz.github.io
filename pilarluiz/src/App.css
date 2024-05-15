@@ -316,6 +316,7 @@ button {
   position: relative;
   width: 40%;
   left: 180px;
+  bottom: 280px;
 }
 
 .experience-container h1 {
@@ -339,14 +340,14 @@ button {
 .experiences .role {
   font-family: "Vidaloka", serif;
   font-size: 25px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   line-height: 130%;
   padding-bottom: 5px;
 }
 
 .experiences .company i {
   font-family: "Vidaloka", serif;
-  font-size: 18px;
+  font-size: 22px;
   letter-spacing: 1px;
   line-height: 130%;
 }
@@ -373,6 +374,8 @@ button {
 
 .research-container {
   grid-area: 2 / 8 / 2 / 14;
+  padding-top: 5px;
+  padding-bottom: 30px;
 }
 
 .research-container h1 {

@@ -313,10 +313,11 @@ button {
 .experience-container {
   background-color: #f3a73c;
   padding: 25px 60px 10px 60px;
-  position: relative;
+  position: absolute;
   width: 40%;
   left: 180px;
-  bottom: 280px;
+  /* top: -50px; */
+  bottom: -410px;
 }
 
 .experience-container h1 {

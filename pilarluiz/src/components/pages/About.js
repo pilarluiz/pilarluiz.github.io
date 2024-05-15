@@ -69,31 +69,37 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="experience">
+        <div className="experience-container">
           <h1>Experience</h1>
-          <ul>
-            <li>
-              <h2>2023 - Now</h2>
-              <h3>Robotics Engineer</h3>
-              <h4>
-                <i>Applied Invention</i>
-              </h4>
-            </li>
-            <li>
-              <h2>2023 - Now</h2>
-              <h3>Software Engineer Intern</h3>
-              <h4>
-                <i>Meta Platforms, Inc.</i>
-              </h4>
-            </li>
-            <li>
-              <h2>2023 - Now</h2>
-              <h3>Computer Architecture Intern</h3>
-              <h4>
-                <i>NVIDIA Corporation</i>
-              </h4>
-            </li>
-          </ul>
+          <div className="experiences">
+            <div className="experience">
+              <h2 className="years">2023 - Now</h2>
+              <div className="company-role-container">
+                <h3 className="role">Robotics Engineer</h3>
+                <h4 className="company">
+                  <i>Applied Invention</i>
+                </h4>
+              </div>
+            </div>
+            <div className="experience">
+              <h2 className="years">2022</h2>
+              <div className="company-role-container">
+                <h3 className="role">Software Engineer Intern</h3>
+                <h4 className="company">
+                  <i>Meta Platforms, Inc.</i>
+                </h4>
+              </div>
+            </div>
+            <div className="experience">
+              <h2 className="years">2021</h2>
+              <div className="company-role-container">
+                <h3 className="role">Computer Architecture Intern</h3>
+                <h4 className="company">
+                  <i>NVIDIA Corporation</i>
+                </h4>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="bottom">
           <div className="research">

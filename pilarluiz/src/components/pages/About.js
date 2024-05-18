@@ -109,61 +109,60 @@ export default function About() {
           </div>
         </div>
 
-        <div className="bottom">
-          <div className="undergrad-involvement">
-            <h1>Undergraduate Involvement</h1>
-            <ul>
-              <li>
-                <h2>
-                  <FontAwesomeIcon icon={faStar} className="fa-star" />
-                  Undergraduate Research Assistant
-                </h2>
-                <ul>
-                  <li>Automatic Coordination of Teams Laboratory</li>
-                  <li>Robotic Embedded Systems Laboratory</li>
-                </ul>
-                <li>
-                  <h2>
-                    <FontAwesomeIcon icon={faStar} className="fa-star" />
-                    Undergraduate Teaching Assistant
-                  </h2>
-                  <ul>
-                    <li>
-                      <FontAwesomeIcon icon={faCircle} className="fa-star" />
-                      Data Structures & Object Oriented Design in C++
-                    </li>
-                    <li>
-                      <FontAwesomeIcon icon={faCircle} className="fa-star" />
-                      Introduction to Computer Systems
-                    </li>
-                    <li>
-                      <FontAwesomeIcon icon={faCircle} className="fa-star" />
-                      Introduction to Embedded Systems
-                    </li>
-                  </ul>
-                </li>
-              </li>
-              <li>
-                <h2>
-                  <FontAwesomeIcon icon={faStar} className="fa-star" />
-                  USC Makers
-                </h2>
-                <ul>
-                  <li>
-                    Electronics hobbyist student organization exploring
-                    robotics, IoT, & embedded systems (firmware)
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <h2>
-                  <FontAwesomeIcon icon={faStar} className="fa-star" />
-                  Triathlon
-                </h2>
-              </li>
-            </ul>
+        <div className="bottom-container">
+          <div className="undergrad-container">
+            <h1>Undergraduate Highlights</h1>
+            <div className="activity">
+              <h2 className="activity-name">
+                <FontAwesomeIcon icon={faStar} className="fa-star" />
+                Undergraduate Research Assistant
+              </h2>
+              <div className="activity-bullet">
+                <FontAwesomeIcon icon={faCircle} className="fa-circle" />
+                Automatic Coordination of Teams Laboratory
+              </div>
+              <div className="activity-bullet">
+                <FontAwesomeIcon icon={faCircle} className="fa-circle" />
+                Robotic Embedded Systems Laboratory
+              </div>
+            </div>
+            <div className="activity">
+              <h2 className="activity-name">
+                <FontAwesomeIcon icon={faStar} className="fa-star" />
+                Undergraduate Teaching Assistant
+              </h2>
+              <div className="activity-bullet">
+                <FontAwesomeIcon icon={faCircle} className="fa-circle" />
+                Data Structures & Object Oriented Design in C++
+              </div>
+              <div className="activity-bullet">
+                <FontAwesomeIcon icon={faCircle} className="fa-circle" />
+                Introduction to Computer Systems
+              </div>
+              <div className="activity-bullet">
+                <FontAwesomeIcon icon={faCircle} className="fa-circle" />
+                Introduction to Embedded Systems
+              </div>
+            </div>
+            <div className="activity">
+              <h2 className="activity-name">
+                <FontAwesomeIcon icon={faStar} className="fa-star" />
+                USC Makers
+              </h2>
+              <div className="activity-bullet">
+                <FontAwesomeIcon icon={faCircle} className="fa-circle" />
+                Electronics hobbyist student organization exploring robotics,
+                IoT, & embedded systems (firmware)
+              </div>
+            </div>
+            <div className="activity">
+              <h2 className="activity-name">
+                <FontAwesomeIcon icon={faStar} className="fa-star" />
+                Triathlon
+              </h2>
+            </div>
           </div>
-          <div className="hobbies">
+          <div className="hobbies-container">
             <h1>Hobbies & Interests</h1>
             <div className="hobby orange">Mandarin</div>
             <div className="hobby green">Spanish</div>
@@ -171,6 +170,8 @@ export default function About() {
             <div className="hobby light-green">Film</div>
             <div className="hobby yellow">Travel</div>
           </div>
+        </div>
+        <div className="resume-container">
           <button className="resume">
             <h2>Resume</h2>
           </button>

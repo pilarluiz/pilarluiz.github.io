@@ -399,3 +399,54 @@ button {
   line-height: 110%;
   text-align: center;
 }
+
+.bottom-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-left: 220px;
+  padding-right: 220px;
+  padding-top: 150px;
+  display: grid;
+  gap: 15px;
+}
+
+.undergrad-container {
+  grid-area: 1 / 1 / 1 / 9;
+}
+
+.undergrad-container h1 {
+  text-align: left;
+  font-family: "Vidaloka", serif;
+  font-size: 42px;
+  letter-spacing: 3px;
+  line-height: 130%;
+  padding-bottom: 18px;
+  color: #000;
+  text-decoration: underline;
+}
+
+.fa-star {
+  color: #f3943c;
+  padding-right: 15px;
+}
+
+.activity-name {
+  font-family: "Vidaloka", serif;
+  font-size: 28px;
+  letter-spacing: 1px;
+  line-height: 130%;
+  padding-bottom: 10px;
+}
+
+.activity-bullet {
+  font-family: "Vidaloka", serif;
+  font-size: 20px;
+  line-height: 130%;
+  padding-bottom: 10px;
+  padding-left: 50px;
+}
+
+.fa-circle {
+  color: #4a6541;
+  padding-right: 15px;
+}

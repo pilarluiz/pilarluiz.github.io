@@ -89,6 +89,11 @@ button {
 
 .hobby {
   border-radius: 30px;
+  width: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Vidaloka", serif;
+  font-size: 20px;
 }
 
 .orange {
@@ -449,4 +454,49 @@ button {
 .fa-circle {
   color: #4a6541;
   padding-right: 15px;
+}
+
+.hobbies-container {
+  grid-area: 1 / 9 / 1 / 12;
+  text-align: center;
+}
+
+.hobbies-container h1 {
+  font-family: "Vidaloka", serif;
+  font-size: 42px;
+  letter-spacing: 3px;
+  line-height: 130%;
+  padding-bottom: 18px;
+  text-decoration: underline;
+}
+
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hobbies-container .row-1 {
+  display: flex;
+  direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+
+.hobbies-container .row-3 {
+  display: flex;
+  direction: row;
+  justify-content: space-evenly;
+}
+
+.hobbies-container .row-2 {
+  padding-bottom: 10px;
+}
+
+.hobbies-container .row-2 .hobby {
+  margin-left: auto;
+  margin-right: auto;
 }

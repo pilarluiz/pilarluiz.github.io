@@ -164,11 +164,19 @@ export default function About() {
           </div>
           <div className="hobbies-container">
             <h1>Hobbies & Interests</h1>
-            <div className="hobby orange">Mandarin</div>
-            <div className="hobby green">Spanish</div>
-            <div className="hobby pink">Running</div>
-            <div className="hobby light-green">Film</div>
-            <div className="hobby yellow">Travel</div>
+            <div className="hobbies">
+              <div className="row-1">
+                <div className="hobby orange">Mandarin</div>
+                <div className="hobby green">Spanish</div>
+              </div>
+              <div className="row-2">
+                <div className="hobby pink">Running</div>
+              </div>
+              <div className="row-3">
+                <div className="hobby light-green">Film</div>
+                <div className="hobby yellow">Travel</div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="resume-container">

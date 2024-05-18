@@ -63,6 +63,12 @@
   background-color: #4a6541;
   color: #f3a73c;
   letter-spacing: 10%;
+  font-family: "Voltaire", sans-serif;
+  font-size: 28px;
+  letter-spacing: 4px;
+  border: none;
+  height: 130%;
+  width: 20%;
 }
 
 .linkedin {
@@ -499,4 +505,10 @@ button {
 .hobbies-container .row-2 .hobby {
   margin-left: auto;
   margin-right: auto;
+}
+
+.resume-container {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

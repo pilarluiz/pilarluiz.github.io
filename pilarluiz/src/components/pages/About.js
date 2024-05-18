@@ -180,9 +180,7 @@ export default function About() {
           </div>
         </div>
         <div className="resume-container">
-          <button className="resume">
-            <h2>Resume</h2>
-          </button>
+          <button className="resume">Resume</button>
         </div>
       </div>
     </div>

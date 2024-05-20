@@ -59,6 +59,14 @@
   background-color: #f1ccca;
 }
 
+.about-container {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-left: 0.5rem;
+  padding-right: 0.5rem; */
+}
+
 .resume {
   background-color: #4a6541;
   color: #f3a73c;
@@ -325,10 +333,10 @@ button {
   background-color: #f3a73c;
   padding: 25px 60px 10px 60px;
   position: absolute;
-  width: 40%;
-  left: 180px;
-  /* top: -50px; */
-  bottom: -180px;
+  width: 700px;
+  left: 600px;
+  /* left: 70px; */
+  top: 1020px;
 }
 
 .experience-container h1 {

@@ -46,6 +46,7 @@ export default function About() {
             <h3>pilarluiz13 [at] gmail [dot] com</h3>
           </div>
         </div>
+
         <div className="education-skills-container">
           <div className="education-container">
             <h1 className="education">Education</h1>
@@ -75,35 +76,36 @@ export default function About() {
               and Deadlock-free Navigation in Cluttered Environments
             </div>
           </div>
-          <div className="experience-container">
-            <h1>Experience</h1>
-            <div className="experiences">
-              <div className="experience">
-                <h2 className="years">2023 - Now</h2>
-                <div className="company-role-container">
-                  <h3 className="role">Robotics Engineer</h3>
-                  <h4 className="company">
-                    <i>Applied Invention</i>
-                  </h4>
-                </div>
+        </div>
+
+        <div className="experience-container">
+          <h1>Experience</h1>
+          <div className="experiences">
+            <div className="experience">
+              <h2 className="years">2023 - Now</h2>
+              <div className="company-role-container">
+                <h3 className="role">Robotics Engineer</h3>
+                <h4 className="company">
+                  <i>Applied Invention</i>
+                </h4>
               </div>
-              <div className="experience">
-                <h2 className="years">2022</h2>
-                <div className="company-role-container">
-                  <h3 className="role">Software Engineer Intern</h3>
-                  <h4 className="company">
-                    <i>Meta Platforms, Inc.</i>
-                  </h4>
-                </div>
+            </div>
+            <div className="experience">
+              <h2 className="years">2022</h2>
+              <div className="company-role-container">
+                <h3 className="role">Software Engineer Intern</h3>
+                <h4 className="company">
+                  <i>Meta Platforms, Inc.</i>
+                </h4>
               </div>
-              <div className="experience">
-                <h2 className="years">2021</h2>
-                <div className="company-role-container">
-                  <h3 className="role">Computer Architecture Intern</h3>
-                  <h4 className="company">
-                    <i>NVIDIA Corporation</i>
-                  </h4>
-                </div>
+            </div>
+            <div className="experience">
+              <h2 className="years">2021</h2>
+              <div className="company-role-container">
+                <h3 className="role">Computer Architecture Intern</h3>
+                <h4 className="company">
+                  <i>NVIDIA Corporation</i>
+                </h4>
               </div>
             </div>
           </div>

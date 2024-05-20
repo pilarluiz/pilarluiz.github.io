@@ -241,7 +241,7 @@ button {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
-  padding: 30px 200px;
+  padding: 30px 80px;
 }
 
 .education-container {
@@ -334,9 +334,8 @@ button {
   padding: 25px 60px 10px 60px;
   position: absolute;
   width: 700px;
-  left: 600px;
-  /* left: 70px; */
-  top: 1020px;
+  left: 610px;
+  top: 970px;
 }
 
 .experience-container h1 {

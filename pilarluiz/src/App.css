@@ -55,9 +55,6 @@
   font-size: 100px;
 } */
 
-.about {
-}
-
 .pink-background {
   background-color: #f1ccca;
 }
@@ -428,9 +425,9 @@ button {
 .bottom-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  padding-left: 220px;
-  padding-right: 220px;
-  padding-top: 150px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 180px;
   display: grid;
   gap: 15px;
 }

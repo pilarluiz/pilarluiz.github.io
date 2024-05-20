@@ -46,15 +46,6 @@
   font-size: 100px;
 }
 
-/* .about {
-  background-image: url("../public/images/img-8.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-} */
-
 .pink-background {
   background-color: #f1ccca;
 }
@@ -67,30 +58,24 @@
   max-width: 1536px;
   margin-left: auto;
   margin-right: auto;
-  /* padding-left: 0.5rem;
-  padding-right: 0.5rem; */
 }
 
 .resume {
   background-color: #4a6541;
   color: #f3a73c;
-  letter-spacing: 10%;
+}
+
+.button {
   font-family: "Voltaire", sans-serif;
-  font-size: 28px;
-  letter-spacing: 4px;
+  width: 100%;
   border: none;
-  height: 130%;
-  width: 20%;
+  height: 45px;
+  font-size: 20px;
+  letter-spacing: 4px;
 }
 
 .linkedin {
   background-color: #f3a73c;
-  font-family: "Voltaire", sans-serif;
-  font-size: 18px;
-  letter-spacing: 4px;
-  width: 100%;
-  border: none;
-  height: 45px;
 }
 
 button {
@@ -339,7 +324,7 @@ button {
   position: absolute;
   width: 700px;
   left: 610px;
-  top: 970px;
+  top: 1030px;
 }
 
 .experience-container h1 {
@@ -428,6 +413,7 @@ button {
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 180px;
+  padding-bottom: 100px;
   display: grid;
   gap: 15px;
 }
@@ -516,10 +502,4 @@ button {
 .hobbies-container .row-2 .hobby {
   margin-left: auto;
   margin-right: auto;
-}
-
-.resume-container {
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
 }

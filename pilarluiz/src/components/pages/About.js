@@ -24,7 +24,10 @@ export default function About() {
                 exemplified in robotics and computer architecture. I enjoy
                 working on physical products that blend engineering disciplines.
               </p>
-              <button className="linkedin">linkedin.com/in/pilarluiz</button>
+              <button className="button resume">Resume</button>
+              <button className="button linkedin">
+                linkedin.com/in/pilarluiz
+              </button>
             </div>
           </div>
           <div className="contact-container">
@@ -190,9 +193,6 @@ export default function About() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="resume-container">
-              <button className="resume">Resume</button>
             </div>
           </div>
         </div>

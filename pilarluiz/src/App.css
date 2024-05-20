@@ -56,7 +56,14 @@
 } */
 
 .about {
+}
+
+.pink-background {
   background-color: #f1ccca;
+}
+
+.green-background {
+  background-color: #4a6541;
 }
 
 .about-container {

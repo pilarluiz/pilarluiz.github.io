@@ -31,13 +31,11 @@ export default function About() {
             </div>
           </div>
           <div className="contact-container">
-            {/* <span className="green-triangle"></span>
-          <span className="green-rectangle"></span> */}
-            {/* <img
-              // src="images/pilar-headshot.png"
+            <img
+              src="images/pilar-headshot.png"
               alt="Pilar Headshot"
-              className=""
-            /> */}
+              className="headshot"
+            />
             <div className="contact">
               <h2>Contact</h2>
               <h3>
@@ -50,7 +48,7 @@ export default function About() {
               <h3>pilarluiz13 [at] gmail [dot] com</h3>
             </div>
           </div>
-        </div>{" "}
+        </div>
         {/* End of pink background */}
         <div className="green-background">
           <div className="about-container">

@@ -77,7 +77,7 @@ export default function About() {
                 </div>
               </div>
               <div className="research-container">
-                <h1>Research</h1>
+                <h1>Research Paper</h1>
                 <div className="research-paper">
                   MRNAV: Multi-Robot Aware Planning and Control Stack for
                   Collision and Deadlock-free Navigation in Cluttered

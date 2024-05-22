@@ -177,18 +177,15 @@ button {
 }
 
 .contact-container {
-  /* position: absolute;
-  right: 0;
-  top: 100px; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 5rem; */
   width: 400px;
   position: absolute;
   bottom: -40px;
   right: 170px;
   z-index: 1;
+  background-image: url("../public/images/green-accent.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .headshot {

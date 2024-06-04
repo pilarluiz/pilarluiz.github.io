@@ -324,7 +324,7 @@ button {
 }
 
 .research-container {
-  grid-area: 2 / 8 / 2 / 14;
+  grid-area: 2 / 8 / 2 / 13;
   padding-top: 5px;
   padding-bottom: 30px;
 }
@@ -480,15 +480,11 @@ button {
 
   .education-skills-container {
     width: 1120px;
+    grid-template-rows: repeat(2, 0.85fr);
+    padding-bottom: 0px;
   }
 
   .education-container {
-    /* 
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-row-end: 3; 
-    grid-column-end: 5; 
-    */
     grid-area: 1 / 1 / 1 / 9;
   }
 
@@ -518,6 +514,40 @@ button {
 
   .skills-container {
     grid-area: 1 / 9 / 2 / 13;
+  }
+
+  .experience-container {
+    padding: 25px 60px 10px 60px;
+    width: 600px;
+    left: 120px;
+    top: -360px;
+  }
+
+  .experience-container h1 {
+    font-size: 42px;
+    padding-bottom: 0px;
+  }
+
+  .experiences .role {
+    line-height: 120%;
+  }
+
+  .experiences .company i {
+    line-height: 120%;
+  }
+
+  .experiences .years {
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  .research-container {
+    grid-area: 2 / 9 / 2 / 13;
+  }
+
+  .research-container h1 {
+    font-size: 42px;
+    text-align: center;
   }
 }
 

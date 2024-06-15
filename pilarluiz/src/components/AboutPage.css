@@ -598,14 +598,71 @@ button {
   .about-container {
     max-width: 1024px;
   }
+
+  .introduction-container h1 {
+    font-size: 65px;
+    letter-spacing: 5px;
+  }
+
+  .introduction-container p {
+    font-size: 18px;
+  }
+
+  .contact-container {
+    width: 320px;
+    right: 100px;
+    bottom: 30px;
+  }
+
+  .headshot {
+    width: 290px;
+  }
+
+  .contact-container h2 {
+    letter-spacing: 3px;
+    font-size: 26px;
+  }
+
+  .contact-container h3 {
+    font-size: 16px;
+  }
+
+  .education-skills-container {
+    width: 1024px;
+    grid-template-rows: repeat(2, 0.85fr);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .education-container {
+    grid-area: 1 / 2 / 1 / 12;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skills-container {
+    grid-area: 2 / 1 / 2 / 7;
+  }
+
+  .year-container {
+    padding-right: 60px;
+  }
+
+  /*
+  .experience-container {
+    padding: 25px 60px 10px 60px;
+    width: 600px;
+    left: 40px;
+    top: -300px;
+  } */
 }
 
 /* lg */
-/* @media (max-width: 1024px) {
+@media (max-width: 1024px) {
   .about-container {
     max-width: 768px;
   }
-} */
+}
 
 /* md */
 /* @media (max-width: 768px) {

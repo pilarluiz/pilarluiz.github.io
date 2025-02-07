@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import { Button } from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCow, faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -32,7 +32,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            TRVL <FontAwesomeIcon icon={faCow} className="fa-cow" />
+            Pilar Luiz
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <FontAwesomeIcon
@@ -47,30 +47,31 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/services"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Services
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
                 About
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="/sign-up"
-                className="nav-links-mobile"
+                to="https://github.com/pilarluiz"
+                target="_blank"
+                className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Sign Up
+                <FontAwesomeIcon icon={faGithub} className="fa-icon" />
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="https://www.linkedin.com/in/pilarluiz/"
+                target="_blank"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                <FontAwesomeIcon icon={faLinkedin} className="fa-icon" />
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
         </div>
       </nav>
     </>

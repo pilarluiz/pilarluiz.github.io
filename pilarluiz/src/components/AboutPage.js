@@ -19,8 +19,8 @@ function AboutPage() {
           <div className="introduction-container">
             <div className="description">
               <h1>
-                Hello, <br />
-                I'm Pilar!
+                Hello <br />
+                World!
               </h1>
               <p>
                 I’m a multidisciplinary engineer from the Silicon Valley. I’m

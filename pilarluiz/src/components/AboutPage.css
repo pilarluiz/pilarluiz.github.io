@@ -629,7 +629,7 @@ button {
 
   .education-skills-container {
     width: 1024px;
-    grid-template-rows: repeat(2, 0.85fr);
+    grid-template-rows: repeat(2, 0.65fr);
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -645,7 +645,7 @@ button {
   }
 
   .year-container {
-    padding-right: 60px;
+    padding-right: 80px;
   }
 
   /*

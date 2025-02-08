@@ -1,0 +1,38 @@
+.pink-background {
+  background-color: #f1ccca;
+  margin: 0px;
+}
+
+.intro-container {
+  /* TODO: Fix padding/margin for screens */
+  width: 90%;
+  /* padding: 0px 10px; */
+  margin: 0px auto;
+  /* margin-top: 4rem; */
+  padding: 50px 0px;
+}
+
+.intro-heading {
+  font-size: 100px;
+  /* margin-top: 110px; */
+  margin-bottom: 55px;
+  font-family: "Rhoza One", serif;
+  letter-spacing: 5px;
+}
+
+.name {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 30px;
+  font-family: "Roboto Mono", serif;
+  font-weight: 500;
+  color: white;
+}
+
+.intro-p {
+  max-width: 700px;
+  margin: 0px auto;
+  font-size: 23px;
+  font-family: "Questrial", serif;
+  line-height: 130%;
+}

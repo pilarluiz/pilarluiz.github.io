@@ -7,9 +7,9 @@
 
 .intro-container {
   width: 90%;
-  margin: 0px auto;
-  margin-top: 4rem;
-  padding: 50px 0px;
+  margin: auto;
+  padding-top: 200px;
+  min-height: 50vh;
 }
 
 .intro-heading {
@@ -36,4 +36,56 @@
   font-size: 23px;
   font-family: "Questrial", serif;
   line-height: 130%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .intro-container {
+    min-height: 100vh;
+  }
+
+  .intro-heading {
+    font-size: 46px;
+  }
+
+  .intro-p {
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+  /* #intro {
+    min-height: unset;
+    padding-left: unset;
+    padding-top: unset;
+    margin: 0;
+    align-items: center;
+  }
+
+  .intro-title {
+    font-size: 46px;
+  }
+  .intro-name {
+    font-size: 46px;
+  }
+
+  .Typist {
+    font-size: 36px;
+  }
+
+  .intro-subtitle {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .intro-desc {
+    font-size: 18px;
+    max-width: unset;
+    padding-bottom: 40px;
+  }
+
+  .intro-contact {
+    font-size: 16px;
+  } */
 }

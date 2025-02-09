@@ -1,0 +1,27 @@
+.navbar {
+  background-color: white;
+  font-family: "Montserrat", serif;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.navbar-light .navbar-brand {
+  font-size: 25px;
+}
+
+.fa-icon {
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
+}
+
+/* TODO: Responsive screen */
+
+/* @media only screen and (max-width: 600px) {
+  .navbar-light .navbar-brand {
+    display: none;
+  }
+
+  .navbar-light .navbar-nav.me-auto .nav-link {
+    display: none;
+  }
+} */

@@ -1,5 +1,6 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
+import NavBarBS from "./components/NavBarBS";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Services from "./components/pages/Services";
@@ -11,7 +12,8 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
+        <NavBarBS />
         <Routes>
           {/* <Home /> -- Pass React.element; Home -- pass function */}
           <Route path="/" exact element={<Home />} />

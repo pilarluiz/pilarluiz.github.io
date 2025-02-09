@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faInstagram,
+  faTiktok,
+} from "@fortawesome/free-brands-svg-icons";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -41,12 +46,12 @@ function Navbar() {
             />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
+            <li className="nav-item nav-page">
               <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item nav-page">
               <Link
                 to="/updated-home"
                 className="nav-links"
@@ -55,12 +60,23 @@ function Navbar() {
                 UpdatedHome
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item nav-page">
               <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
                 About
               </Link>
             </li>
-            <li className="nav-item">
+
+            <li className="nav-item nav-icon">
+              <Link
+                to="https://www.linkedin.com/in/pilarluiz/"
+                target="_blank"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                <FontAwesomeIcon icon={faLinkedin} className="fa-icon" />
+              </Link>
+            </li>
+            <li className="nav-item nav-icon">
               <Link
                 to="https://github.com/pilarluiz"
                 target="_blank"
@@ -70,14 +86,24 @@ function Navbar() {
                 <FontAwesomeIcon icon={faGithub} className="fa-icon" />
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item nav-icon">
               <Link
-                to="https://www.linkedin.com/in/pilarluiz/"
+                to="https://www.instagram.com/pilarsprojectcar/"
                 target="_blank"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                <FontAwesomeIcon icon={faLinkedin} className="fa-icon" />
+                <FontAwesomeIcon icon={faInstagram} className="fa-icon" />
+              </Link>
+            </li>
+            <li className="nav-item nav-icon">
+              <Link
+                to="https://www.tiktok.com/@pilarsprojectcar"
+                target="_blank"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                <FontAwesomeIcon icon={faTiktok} className="fa-icon" />
               </Link>
             </li>
           </ul>

@@ -1,116 +1,61 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css";
+import React from "react";
+// import { Navbar, Nav, Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
   faInstagram,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
+import "./NavBar.css";
+// react-bootstrap only works with v3. link stylesheet.
+import "bootstrap/dist/css/bootstrap.css";
 
-function Navbar() {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  // Prevents button from showing up every time screen refreshes.
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener("resize", showButton);
-
+function NavBar() {
   return (
-    <>
-      <nav className="navbar">
-        <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            Pilar Luiz
-          </Link>
-          <div className="menu-icon" onClick={handleClick}>
-            <FontAwesomeIcon
-              icon={click ? faTimes : faBars}
-              className={click ? "fa-times" : "fa-bars"}
-            />
-          </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item nav-page">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-            <li className="nav-item nav-page">
-              <Link
-                to="/updated-home"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                UpdatedHome
-              </Link>
-            </li>
-            <li className="nav-item nav-page">
-              <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
-                About
-              </Link>
-            </li>
-
-            <li className="nav-item nav-icon">
-              <Link
-                to="https://www.linkedin.com/in/pilarluiz/"
-                target="_blank"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                <FontAwesomeIcon icon={faLinkedin} className="fa-icon" />
-              </Link>
-            </li>
-            <li className="nav-item nav-icon">
-              <Link
-                to="https://github.com/pilarluiz"
-                target="_blank"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                <FontAwesomeIcon icon={faGithub} className="fa-icon" />
-              </Link>
-            </li>
-            <li className="nav-item nav-icon">
-              <Link
-                to="https://www.instagram.com/pilarsprojectcar/"
-                target="_blank"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                <FontAwesomeIcon icon={faInstagram} className="fa-icon" />
-              </Link>
-            </li>
-            <li className="nav-item nav-icon">
-              <Link
-                to="https://www.tiktok.com/@pilarsprojectcar"
-                target="_blank"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                <FontAwesomeIcon icon={faTiktok} className="fa-icon" />
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </>
+    <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="/">Pilar Luiz</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Projects</Nav.Link>
+            <Nav.Link href="/">Placeholder</Nav.Link>
+          </Nav>
+          <Nav className="ml-auto">
+            <Nav.Link href="mailto:pilarluiz13@gmail.com">
+              <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />
+            </Nav.Link>
+            <Nav.Link
+              href="https://www.linkedin.com/in/pilarluiz/"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className="fa-icon" />
+            </Nav.Link>
+            <Nav.Link href="https://github.com/pilarluiz" target="_blank">
+              <FontAwesomeIcon icon={faGithub} className="fa-icon" />
+            </Nav.Link>
+            <Nav.Link
+              href="https://www.instagram.com/pilarsprojectcar/"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faInstagram} className="fa-icon" />
+            </Nav.Link>
+            <Nav.Link
+              href="https://www.tiktok.com/@pilarsprojectcar"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faTiktok} className="fa-icon" />
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default Navbar;
+export default NavBar;

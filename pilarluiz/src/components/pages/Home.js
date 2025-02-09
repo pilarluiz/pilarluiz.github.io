@@ -1,15 +1,17 @@
 import React from "react";
 import "../../App.css";
-import HeroSection from "../HeroSection";
-import Cards from "../Cards";
-import Footer from "../Footer";
+import IntroSection from "../IntroSection";
+import Projects from "../Projects";
+import CarSection from "../CarSection";
+import ExperienceSection from "../ExperienceSection";
 
 function Home() {
   return (
     <>
-      <HeroSection />
-      <Cards />
-      <Footer />
+      <IntroSection />
+      <ExperienceSection />
+      <Projects />
+      <CarSection />
     </>
   );
 }

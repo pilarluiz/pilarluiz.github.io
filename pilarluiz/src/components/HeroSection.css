@@ -1,73 +1,46 @@
-/* video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
 .hero-container {
-  background: url("../../public/images/img-home.jpg") center center/cover
-    no-repeat;
-  height: 100vh;
+  background-color: #504e76;
+  height: 45vh;
+  min-height: 800px;
+  max-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
+  padding: 100px 0px 50px;
 }
 
-.hero-container > h1 {
-  color: #fff;
-  font-size: 100px;
-  margin-top: -100px;
+.cout,
+.endl {
+  color: #fcdd9d;
+  letter-spacing: 2px;
+  font-size: 40px;
+  width: 50%;
+  padding: 40px 0px;
+  text-align: center;
 }
 
-.hero-container > p {
-  margin-top: 8px;
-  color: #fff;
-  font-size: 32px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
+/* .cout {
+  margin: 0px auto;
+  text-align: left;
+} */
 
-.hero-btns {
-  margin-top: 32px;
-}
+/* .endl {
+  margin: 0px auto;
+  text-align: right;
+} */
 
-.hero-btns .btn {
-  margin: 6px;
-}
-
-.fa-play-circle {
-  margin-left: 4px;
-}
-
-@media screen and (max-width: 960px) {
-  .hero-container > h1 {
-    font-size: 70px;
-    margin-top: -150px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .hero-container > h1 {
-    font-size: 50px;
-    margin-top: -100px;
-  }
-
-  .hero-container > p {
-    font-size: 30px;
-  }
-
-  .btn-mobile {
-    display: block;
-    text-decoration: none;
-  }
-
-  .btn {
-    width: 100%;
-  }
+h1 {
+  color: #c4c3e3;
+  font-size: 160px;
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  margin: 0px auto;
+  font-style: normal;
+  letter-spacing: 5px;
+  text-align: center;
 }

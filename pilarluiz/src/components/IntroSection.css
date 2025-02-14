@@ -1,24 +1,47 @@
-.pink-background {
-  background-color: #f1ccca;
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+.intro-container {
+  background-color: #fdf8e2;
   margin: 0px;
+  padding: 40px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45vh;
+  min-height: 800px;
 }
 
 /* TODO: Responsiveness */
 
-.intro-container {
-  width: 90%;
+.heading-container {
+  /* width: 90%; */
+  /* flex: 1; */
+  width: 40%;
   margin: auto;
-  padding-top: 200px;
-  min-height: 50vh;
+  /* padding-top: 100px; */
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 75%;
+}
+
+.intro-image {
+  width: 40%;
+  text-align: center;
 }
 
 .intro-heading {
-  font-size: 100px;
-  /* margin-top: 110px; */
-  margin-bottom: 55px;
-  font-family: "Rhoza One", serif;
-  font-weight: bold;
+  font-size: 110px;
+  /* margin-bottom: 55px; */
   letter-spacing: 5px;
+  text-align: center;
+  color: #a3b565;
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .name {
@@ -27,16 +50,17 @@
   margin-bottom: 30px;
   font-family: "Roboto Mono", serif;
   font-weight: 500;
-  color: white;
+  color: #f1642e;
 }
 
 .intro-p {
   max-width: 700px;
   margin: 0px auto;
-  font-size: 23px;
+  font-size: 26px;
   font-family: "Questrial", serif;
   line-height: 130%;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 @media only screen and (max-width: 600px) {

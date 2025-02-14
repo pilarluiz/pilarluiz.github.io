@@ -6,21 +6,24 @@ import "./IntroSection.css";
 
 function IntroSection() {
   return (
-    <div className="pink-background">
-      <div className="intro-container">
-        <h1 className="intro-heading">
-          Hello
-          <br />
-          World!
-        </h1>
-        <h3 className="name">std::string name = "pilar luiz";</h3>
+    <div className="intro-container">
+      <div className="heading-container">
+        <div>
+          <h1 className="intro-heading">
+            Hello,
+            <br />
+            World!
+          </h1>
+          <h3 className="name">std::string name = "Pilar";</h3>
+        </div>
         <p className="intro-p">
-          I'm a computer engineer passionate about the intersection of hardware
-          and software, with a particular interest in computer architecture.
-          I've worked in industry across computer architecture, software
-          engineering, and robotics.
+          I'm a <b>computer engineer</b> passionate about the intersection of
+          hardware and software, with a particular interest in computer
+          architecture. I've worked in industry across computer architecture,
+          software engineering, and robotics.
         </p>
       </div>
+      <div className="intro-image">Image Placeholder</div>
     </div>
   );
 }

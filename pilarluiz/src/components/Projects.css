@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
 .projects-container {
-  /* max-width: 1120px;
-  width: 90%; */
+  /* height: 45vh; */
+  /* min-height: 800px; */
   background-color: #c4c3e3;
-  /* height: 45vh;
-  min-height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; */
+  padding: 40px 10px;
+}
+
+.projects-content-container {
+  /* max-width: 1120px; */
+  /* width: 90%; */
+  height: 100%;
+  margin: 0px auto;
 }
 
 .projects-header {
@@ -33,12 +35,14 @@
 }
 
 .all-projects-link {
-  font-size: 29px;
   text-decoration: none;
-  color: black;
-  /* Add padding on top to cancel out bottom border. */
-  padding-top: 2px;
-  border-bottom: 2px solid black;
+  color: #504e76;
+  border-bottom: 2px solid #504e76;
+  font-size: 27px;
+  font-family: "Questrial", serif;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .all-projects-link:hover {
@@ -61,8 +65,7 @@
 
 .cards__wrapper {
   position: relative;
-  /* margin: 30px 0px 40px; */
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .cards__items {

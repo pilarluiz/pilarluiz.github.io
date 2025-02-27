@@ -1,0 +1,108 @@
+.experience-section-container {
+  min-height: 600px;
+  height: 40vh;
+  background-color: #d57b0e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.experience-section-header {
+  margin: auto;
+  width: 80%;
+  max-width: 1400px;
+  color: #fcdd9d;
+  font-size: 60px;
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  height: 10%;
+  padding-top: 3rem;
+}
+
+.inner-experience-section-container {
+  width: 80%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: start;
+  padding: 20px 0px;
+  flex-direction: row;
+  height: 70%;
+}
+
+.tabs {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.tab {
+  display: block;
+  background-color: #d57b0e;
+  padding: 10px;
+  margin: 30px 0px;
+  text-align: left;
+  border: none;
+  border-radius: 0%;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 31px;
+  letter-spacing: 1px;
+  /* color: #fcdd9d; */
+  color: #333333;
+}
+
+.tab:hover {
+  /* background-color: #ccc; */
+  color: #fdf8e2;
+}
+
+.tab.active {
+  /* background-color: #f1642e; */
+  /* color: #fff; */
+  color: #fcdd9d;
+  /* color: #333333; */
+}
+
+.tab-content {
+  flex: 1;
+  padding: 30px 20px 20px 40px;
+  /* background-color: #fff; */
+  border-left: 1px solid #fcdd9d;
+  margin-left: 50px;
+  margin-right: 60px;
+  color: #333333;
+}
+
+.tab-detail {
+  display: none;
+}
+
+.tab-detail.active {
+  display: block;
+}
+
+.tab-content h2 {
+  margin-top: 0;
+  letter-spacing: 1px;
+  font-size: 35px;
+}
+
+.tab-content h3 {
+  font-size: 23px;
+  color: #fcdd9d;
+  letter-spacing: 0.5px;
+}
+
+.company {
+  /* color: #fdf8e2; */
+  color: #fcdd9d;
+}
+
+.tab-content p {
+  padding-top: 10px;
+  font-size: 24px;
+}

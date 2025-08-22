@@ -5,8 +5,8 @@
 .intro-container {
   background-color: #fdf8e2;
   margin: 0px;
-  height: 45vh;
-  min-height: 800px;
+  min-height: 55vh;
+  min-height: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,6 +101,13 @@
   letter-spacing: 1px;
 }
 
+.education-p {
+  padding-top: 20px;
+  margin-top: 0;
+  font-size: 26px;
+  line-height: 130%;
+}
+
 /* Large desktop styles */
 @media only screen and (max-width: 1536px) {
   .intro-heading {
@@ -108,6 +115,10 @@
   }
 
   .intro-p {
+    font-size: 24px;
+  }
+
+  .education-p {
     font-size: 24px;
   }
 
@@ -123,6 +134,10 @@
   }
 
   .intro-p {
+    font-size: 22px;
+  }
+
+  .education-p {
     font-size: 22px;
   }
 
@@ -146,6 +161,10 @@
     font-size: 20px;
   }
 
+  .education-p {
+    font-size: 20px;
+  }
+
   .name {
     font-size: 28px;
   }
@@ -163,7 +182,7 @@
 /* Tablet styles */
 @media only screen and (max-width: 768px) {
   .intro-container {
-    min-height: 600px;
+    min-height: 700px;
     height: auto;
     padding: 40px 0;
   }
@@ -210,7 +229,7 @@
 /* Mobile styles */
 @media only screen and (max-width: 480px) {
   .intro-container {
-    min-height: 500px;
+    min-height: 600px;
     padding: 30px 0;
   }
 
@@ -244,7 +263,7 @@
 /* Small mobile styles */
 @media only screen and (max-width: 360px) {
   .intro-container {
-    min-height: 450px;
+    min-height: 550px;
     padding: 20px 0;
   }
 

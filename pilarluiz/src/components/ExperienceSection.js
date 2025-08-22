@@ -91,9 +91,11 @@ function ExperienceSection() {
                     <span className="company">{experience.company}</span>
                   </h2>
                   <h3>{experience.dates}</h3>
-                  {experience.content.map((bullet) => (
-                    <p>{bullet}</p>
-                  ))}
+                  <ul className="experience-bullets">
+                    {experience.content.map((bullet, index) => (
+                      <li key={index}>{bullet}</li>
+                    ))}
+                  </ul>
                 </div>
               )
           )}

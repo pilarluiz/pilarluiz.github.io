@@ -326,6 +326,45 @@
   }
 }
 
+/* Medium desktop styles - transition to stacked layout */
+@media only screen and (max-width: 1250px) {
+  .car-section-main {
+    flex-direction: column;
+    gap: 50px;
+    min-height: auto;
+  }
+
+  .car-photo-section {
+    max-width: 100%;
+  }
+
+  .car-project-photo {
+    max-width: 800px;
+    height: 550px;
+  }
+
+  .car-photo-placeholder {
+    max-width: 800px;
+    height: 550px;
+  }
+
+  .tiktok-grid {
+    flex-direction: row;
+    gap: 40px;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .tiktok-embed {
+    width: 325px;
+    height: 575px;
+  }
+
+  .tiktok-embed-container {
+    min-width: 325px;
+  }
+}
+
 /* Desktop styles */
 @media only screen and (max-width: 1200px) {
   .car-section-title {
@@ -337,27 +376,39 @@
   }
 
   .car-section-main {
+    flex-direction: column;
     gap: 40px;
-    min-height: 500px;
+    min-height: auto;
+  }
+
+  .car-photo-section {
+    max-width: 100%;
   }
 
   .car-project-photo {
-    max-width: 600px;
-    height: 430px;
+    max-width: 700px;
+    height: 500px;
   }
 
   .car-photo-placeholder {
-    max-width: 600px;
-    height: 430px;
+    max-width: 700px;
+    height: 500px;
+  }
+
+  .tiktok-grid {
+    flex-direction: row;
+    gap: 30px;
+    max-width: 100%;
+    justify-content: center;
   }
 
   .tiktok-embed {
-    width: 280px;
-    height: 495px;
+    width: 325px;
+    height: 575px;
   }
 
   .tiktok-embed-container {
-    min-width: 280px;
+    min-width: 325px;
   }
 
   .tiktok-embed-info span {
@@ -384,26 +435,39 @@
   }
 
   .car-section-main {
+    flex-direction: column;
     gap: 30px;
+    min-height: auto;
+  }
+
+  .car-photo-section {
+    max-width: 100%;
   }
 
   .car-project-photo {
-    max-width: 400px;
-    height: 300px;
+    max-width: 600px;
+    height: 400px;
   }
 
   .car-photo-placeholder {
-    max-width: 400px;
-    height: 300px;
+    max-width: 600px;
+    height: 400px;
+  }
+
+  .tiktok-grid {
+    flex-direction: row;
+    gap: 20px;
+    max-width: 100%;
+    justify-content: center;
   }
 
   .tiktok-embed {
-    width: 240px;
-    height: 425px;
+    width: 280px;
+    height: 495px;
   }
 
   .tiktok-embed-container {
-    min-width: 240px;
+    min-width: 280px;
   }
 
   .tiktok-embed-info span {

@@ -327,7 +327,7 @@
 }
 
 /* Medium desktop styles - transition to stacked layout */
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1500px) {
   .car-section-main {
     flex-direction: column;
     gap: 50px;

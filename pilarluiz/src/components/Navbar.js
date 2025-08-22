@@ -1,5 +1,4 @@
 import React from "react";
-// import { Navbar, Nav, Container } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -12,7 +11,6 @@ import {
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import "./NavBar.css";
-// react-bootstrap only works with v3. link stylesheet.
 import "bootstrap/dist/css/bootstrap.css";
 
 function NavBar() {
@@ -22,10 +20,6 @@ function NavBar() {
         <Navbar.Brand href="/">Pilar Luiz</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Projects</Nav.Link>
-            <Nav.Link href="/">Placeholder</Nav.Link>
-          </Nav>
           <Nav className="ml-auto">
             <Nav.Link href="mailto:pilarluiz13@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />

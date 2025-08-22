@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+.intro-container {
+  background-color: #fdf8e2;
+  margin: 0px;
+  min-height: 55vh;
+  min-height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inner-intro-container {
+  padding: 40px 10px;
+  display: flex;
+  width: 75%;
+  margin: auto;
+  max-width: 1600px;
+  align-items: center;
+  gap: 40px;
+}
+
+.heading-container {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 75%;
+}
+
+.intro-image {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-image img {
+  flex-shrink: 0;
+  width: 75%;
+  max-width: 300px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.intro-heading {
+  font-size: 110px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: #a3b565;
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.1;
+}
+
+.name {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 30px;
+  font-family: "Roboto Mono", serif;
+  font-weight: 500;
+  color: #f1642e;
+}
+
+.typing-animation {
+  font-family: "Roboto Mono", monospace;
+  color: #f1642e;
+  font-weight: 500;
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+  color: #f1642e;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.intro-p {
+  padding-top: 30px;
+  max-width: 700px;
+  margin: 0px auto;
+  font-size: 26px;
+  font-family: "Questrial", serif;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.education-p {
+  padding-top: 20px;
+  margin-top: 0;
+  font-size: 26px;
+  line-height: 130%;
+}
+
+/* Large desktop styles */
+@media only screen and (max-width: 1536px) {
+  .intro-heading {
+    font-size: 100px;
+  }
+
+  .intro-p {
+    font-size: 24px;
+  }
+
+  .education-p {
+    font-size: 24px;
+  }
+
+  .name {
+    font-size: 32px;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (max-width: 1200px) {
+  .intro-heading {
+    font-size: 90px;
+  }
+
+  .intro-p {
+    font-size: 22px;
+  }
+
+  .education-p {
+    font-size: 22px;
+  }
+
+  .name {
+    font-size: 30px;
+  }
+
+  .inner-intro-container {
+    width: 80%;
+    gap: 30px;
+  }
+}
+
+/* Laptop styles */
+@media only screen and (max-width: 1024px) {
+  .intro-heading {
+    font-size: 80px;
+  }
+
+  .intro-p {
+    font-size: 20px;
+  }
+
+  .education-p {
+    font-size: 20px;
+  }
+
+  .name {
+    font-size: 28px;
+  }
+
+  .inner-intro-container {
+    width: 85%;
+    gap: 25px;
+  }
+
+  .intro-image img {
+    width: 80%;
+  }
+}
+
+/* Tablet styles */
+@media only screen and (max-width: 768px) {
+  .intro-container {
+    min-height: 700px;
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .inner-intro-container {
+    flex-direction: column;
+    width: 90%;
+    gap: 30px;
+    padding: 20px 10px;
+  }
+
+  .heading-container {
+    width: 100%;
+    height: auto;
+    order: 2;
+  }
+
+  .intro-image {
+    width: 100%;
+    order: 1;
+  }
+
+  .intro-image img {
+    width: 60%;
+    max-width: 250px;
+  }
+
+  .intro-heading {
+    font-size: 70px;
+    letter-spacing: 3px;
+  }
+
+  .intro-p {
+    font-size: 18px;
+    padding-top: 20px;
+  }
+
+  .name {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 480px) {
+  .intro-container {
+    min-height: 600px;
+    padding: 30px 0;
+  }
+
+  .inner-intro-container {
+    width: 95%;
+    gap: 25px;
+    padding: 15px 5px;
+  }
+
+  .intro-image img {
+    width: 70%;
+    max-width: 200px;
+  }
+
+  .intro-heading {
+    font-size: 60px;
+    letter-spacing: 2px;
+  }
+
+  .intro-p {
+    font-size: 16px;
+    padding-top: 15px;
+  }
+
+  .name {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Small mobile styles */
+@media only screen and (max-width: 360px) {
+  .intro-container {
+    min-height: 550px;
+    padding: 20px 0;
+  }
+
+  .inner-intro-container {
+    gap: 20px;
+  }
+
+  .intro-image img {
+    width: 80%;
+    max-width: 180px;
+  }
+
+  .intro-heading {
+    font-size: 50px;
+    letter-spacing: 1px;
+  }
+
+  .intro-p {
+    font-size: 14px;
+    padding-top: 10px;
+  }
+
+  .name {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}

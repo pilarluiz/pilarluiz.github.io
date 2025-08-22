@@ -119,7 +119,6 @@ button {
   bottom: -40px;
   right: 170px;
   z-index: 1;
-  background-image: url("../../public/images/green-accent.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

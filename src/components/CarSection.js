@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import "./CarSection.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCar } from "@fortawesome/free-solid-svg-icons";
 
 function CarSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 820);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
     <div className="car-section-container">
       <div className="car-section-content">
@@ -36,30 +48,60 @@ function CarSection() {
           </div>
 
           <div className="tiktok-grid">
-            <div className="tiktok-embed-container">
-              <iframe
-                src="https://www.tiktok.com/embed/7461294363293781278"
-                width="325"
-                height="575"
-                frameBorder="0"
-                allowFullScreen
-                title="Engine Modifications TikTok"
-                className="tiktok-embed"
-                scrolling="no"
-              />
+            <div className="instagram-embed-container">
+              {!isMobile ? (
+                <iframe
+                  src="https://www.instagram.com/p/DL9LrU2OeJH/embed/captioned/"
+                  width="380"
+                  height="675"
+                  frameBorder="0"
+                  allowFullScreen
+                  title="Car Project Instagram"
+                  className="instagram-embed"
+                  scrolling="no"
+                />
+              ) : (
+                <div className="instagram-thumbnail">
+                  <iframe
+                    src="https://www.instagram.com/p/DL9LrU2OeJH/embed"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allowFullScreen
+                    title="Car Project Instagram"
+                    className="instagram-photo"
+                    scrolling="no"
+                  />
+                </div>
+              )}
             </div>
 
-            <div className="tiktok-embed-container">
-              <iframe
-                src="https://www.tiktok.com/embed/7499510319824243999"
-                width="325"
-                height="575"
-                frameBorder="0"
-                allowFullScreen
-                title="EVAP System TikTok"
-                className="tiktok-embed"
-                scrolling="no"
-              />
+            <div className="instagram-embed-container">
+              {!isMobile ? (
+                <iframe
+                  src="https://www.instagram.com/p/DJHf-ADpyF1/embed/captioned/"
+                  width="380"
+                  height="675"
+                  frameBorder="0"
+                  allowFullScreen
+                  title="Car Project Instagram Reel"
+                  className="instagram-embed"
+                  scrolling="no"
+                />
+              ) : (
+                <div className="instagram-thumbnail">
+                  <iframe
+                    src="https://www.instagram.com/p/DJHf-ADpyF1/embed/captioned/"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allowFullScreen
+                    title="Car Project Instagram Reel"
+                    className="instagram-photo"
+                    scrolling="no"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>

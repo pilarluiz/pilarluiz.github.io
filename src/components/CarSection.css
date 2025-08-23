@@ -72,7 +72,7 @@
 }
 
 .car-project-photo:hover {
-  transform: scale(1.02);
+  transform: none;
 }
 
 .car-photo-placeholder {
@@ -178,6 +178,14 @@
   max-width: 100%;
 }
 
+.instagram-embed:hover {
+  transform: none !important;
+}
+
+.instagram-embed * {
+  transform: none !important;
+}
+
 /* TikTok Thumbnail Styles */
 .tiktok-thumbnail {
   display: none;
@@ -198,8 +206,8 @@
 }
 
 .tiktok-thumbnail:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transform: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   color: white;
   text-decoration: none;
 }
@@ -797,11 +805,11 @@
   .instagram-thumbnail {
     display: flex !important;
     width: 250px;
-    height: 444px;
+    height: auto;
   }
 
   .instagram-embed-container {
-    min-height: 444px;
+    min-height: auto;
   }
 }
 
@@ -852,11 +860,12 @@
 
   .tiktok-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    max-width: 300px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 400px;
     align-items: center;
-    margin-top: 40px;
+    margin: 0;
+    padding: 0;
   }
 
   /* Hide embeds, show thumbnails on tablet and smaller */
@@ -872,8 +881,8 @@
   .tiktok-thumbnail,
   .instagram-thumbnail {
     display: flex !important;
-    width: 200px;
-    height: 355px;
+    width: 160px;
+    height: 284px;
     aspect-ratio: 9/16;
   }
 
@@ -885,6 +894,8 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
   }
 
   .placeholder-icon {
@@ -943,7 +954,7 @@
   .tiktok-thumbnail {
     display: flex;
     width: 250px;
-    height: 444px;
+    height: auto;
     aspect-ratio: 9/16;
   }
 
@@ -1003,8 +1014,12 @@
   }
 
   .tiktok-grid {
-    flex-direction: column;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 380px;
+    margin: 0;
+    padding: 0;
   }
 
   /* Hide embeds, show thumbnails */
@@ -1014,8 +1029,8 @@
 
   .tiktok-thumbnail {
     display: flex;
-    width: 220px;
-    height: 391px;
+    width: 180px;
+    height: 320px;
     aspect-ratio: 9/16;
   }
 
@@ -1037,12 +1052,24 @@
   .social-icon {
     font-size: 16px;
   }
+
+  .instagram-thumbnail {
+    display: flex;
+    width: 160px;
+    height: 284px;
+    aspect-ratio: 9/16;
+  }
 }
 
 /* Small mobile styles */
 @media only screen and (max-width: 360px) {
   .car-section-title {
     font-size: 24px;
+  }
+
+  .instagram-thumbnail {
+    width: 140px;
+    height: 249px;
   }
 
   .car-section-main {

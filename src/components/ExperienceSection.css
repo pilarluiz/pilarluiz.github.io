@@ -4,7 +4,7 @@
   background-color: #d57b0e;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 40px 0;
 }
 
@@ -13,7 +13,7 @@
   width: 80%;
   max-width: 1400px;
   color: #fcdd9d;
-  font-size: 60px;
+  font-size: 50px;
   font-family: "Luckiest Guy", serif;
   font-weight: 400;
   font-style: normal;
@@ -50,7 +50,7 @@
   width: 100%;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 31px;
+  font-size: 24px;
   letter-spacing: 1px;
   color: #333333;
   font-weight: 500;
@@ -74,6 +74,7 @@
   margin-left: 50px;
   margin-right: 60px;
   color: #333333;
+  min-height: 360px;
 }
 
 .tab-detail {
@@ -87,12 +88,12 @@
 .tab-content h2 {
   margin-top: 0;
   letter-spacing: 1px;
-  font-size: 35px;
+  font-size: 28px;
   margin-bottom: 10px;
 }
 
 .tab-content h3 {
-  font-size: 23px;
+  font-size: 18px;
   color: #fcdd9d;
   letter-spacing: 0.5px;
   margin-bottom: 20px;
@@ -104,7 +105,7 @@
 
 .tab-content p {
   padding-top: 10px;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.5;
   margin-bottom: 15px;
 }
@@ -118,7 +119,7 @@
 .experience-bullets li {
   position: relative;
   padding: 10px 0 10px 25px;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.5;
   margin-bottom: 15px;
   color: #333333;
@@ -137,26 +138,26 @@
 /* Large desktop styles */
 @media only screen and (max-width: 1536px) {
   .experience-section-header {
-    font-size: 55px;
+    font-size: 45px;
   }
 
   .tab {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .tab-content h2 {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .experience-bullets li {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 
 /* Desktop styles */
 @media only screen and (max-width: 1200px) {
   .experience-section-header {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .inner-experience-section-container {
@@ -165,7 +166,7 @@
   }
 
   .tab {
-    font-size: 26px;
+    font-size: 20px;
     padding: 12px 18px;
   }
 
@@ -176,15 +177,15 @@
   }
 
   .tab-content h2 {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .tab-content h3 {
-    font-size: 21px;
+    font-size: 16px;
   }
 
   .experience-bullets li {
-    font-size: 20px;
+    font-size: 15px;
     padding: 8px 0 8px 20px;
   }
 
@@ -197,7 +198,7 @@
 /* Laptop styles */
 @media only screen and (max-width: 1024px) {
   .experience-section-header {
-    font-size: 45px;
+    font-size: 35px;
   }
 
   .inner-experience-section-container {
@@ -210,7 +211,7 @@
   }
 
   .tab {
-    font-size: 24px;
+    font-size: 18px;
     padding: 10px 15px;
   }
 
@@ -221,15 +222,15 @@
   }
 
   .tab-content h2 {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .tab-content h3 {
-    font-size: 19px;
+    font-size: 14px;
   }
 
   .experience-bullets li {
-    font-size: 18px;
+    font-size: 14px;
     padding: 6px 0 6px 18px;
   }
 
@@ -246,7 +247,7 @@
   }
 
   .experience-section-header {
-    font-size: 40px;
+    font-size: 32px;
     width: 90%;
     padding: 1.5rem 0;
   }
@@ -267,7 +268,7 @@
   }
 
   .tab {
-    font-size: 20px;
+    font-size: 16px;
     padding: 8px 12px;
     border-radius: 6px;
     min-width: 120px;
@@ -289,18 +290,19 @@
     border-left: none;
     border-top: 1px solid #fcdd9d;
     padding-top: 20px;
+    min-height: 300px;
   }
 
   .tab-content h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .tab-content h3 {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   .experience-bullets li {
-    font-size: 16px;
+    font-size: 13px;
     padding: 5px 0 5px 15px;
     margin-bottom: 10px;
   }
@@ -318,7 +320,7 @@
   }
 
   .experience-section-header {
-    font-size: 35px;
+    font-size: 28px;
     width: 95%;
     padding: 1rem 0;
   }
@@ -333,25 +335,26 @@
   }
 
   .tab {
-    font-size: 18px;
+    font-size: 14px;
     padding: 6px 10px;
     min-width: 100px;
   }
 
   .tab-content {
     padding: 15px 5px 5px 5px;
+    min-height: 250px;
   }
 
   .tab-content h2 {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .tab-content h3 {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .experience-bullets li {
-    font-size: 14px;
+    font-size: 12px;
     padding: 4px 0 4px 12px;
     margin-bottom: 8px;
     line-height: 1.4;
@@ -366,7 +369,7 @@
 /* Small mobile styles */
 @media only screen and (max-width: 360px) {
   .experience-section-header {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .experience-tabs {
@@ -375,21 +378,25 @@
   }
 
   .tab {
-    font-size: 16px;
+    font-size: 12px;
     width: 90%;
     min-width: unset;
   }
 
   .tab-content h2 {
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  .tab-content {
+    min-height: 200px;
   }
 
   .tab-content h3 {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .experience-bullets li {
-    font-size: 13px;
+    font-size: 11px;
     padding: 3px 0 3px 10px;
     margin-bottom: 6px;
   }

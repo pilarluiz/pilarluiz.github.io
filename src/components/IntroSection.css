@@ -5,8 +5,8 @@
 .intro-container {
   background-color: #fdf8e2;
   margin: 0px;
-  min-height: 55vh;
-  min-height: 900px;
+  height: auto;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,7 +48,7 @@
 }
 
 .intro-heading {
-  font-size: 110px;
+  font-size: 80px;
   letter-spacing: 5px;
   text-align: center;
   color: #a3b565;
@@ -60,7 +60,7 @@
 
 .name {
   text-align: center;
-  font-size: 35px;
+  font-size: 25px;
   margin-bottom: 15px;
   font-family: "Roboto Mono", serif;
   font-weight: 500;
@@ -94,7 +94,7 @@
   padding-top: 30px;
   max-width: 700px;
   margin: 0px auto;
-  font-size: 22px;
+  font-size: 18px;
   font-family: "Questrial", serif;
   line-height: 130%;
   text-align: center;
@@ -104,45 +104,45 @@
 .education-p {
   padding-top: 20px;
   margin-top: 0;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 130%;
 }
 
 /* Large desktop styles */
 @media only screen and (max-width: 1536px) {
   .intro-heading {
-    font-size: 100px;
+    font-size: 70px;
   }
 
   .intro-p {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .education-p {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .name {
-    font-size: 32px;
+    font-size: 22px;
   }
 }
 
 /* Desktop styles */
 @media only screen and (max-width: 1200px) {
   .intro-heading {
-    font-size: 90px;
+    font-size: 65px;
   }
 
   .intro-p {
-    font-size: 19px;
+    font-size: 15px;
   }
 
   .education-p {
-    font-size: 19px;
+    font-size: 15px;
   }
 
   .name {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .inner-intro-container {
@@ -154,19 +154,19 @@
 /* Laptop styles */
 @media only screen and (max-width: 1024px) {
   .intro-heading {
-    font-size: 80px;
+    font-size: 55px;
   }
 
   .intro-p {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .education-p {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .name {
-    font-size: 28px;
+    font-size: 18px;
   }
 
   .inner-intro-container {
@@ -182,7 +182,7 @@
 /* Tablet styles */
 @media only screen and (max-width: 768px) {
   .intro-container {
-    min-height: 700px;
+    min-height: 500px;
     height: auto;
     padding: 40px 0;
   }
@@ -211,17 +211,17 @@
   }
 
   .intro-heading {
-    font-size: 70px;
+    font-size: 50px;
     letter-spacing: 3px;
   }
 
   .intro-p {
-    font-size: 17px;
+    font-size: 13px;
     padding-top: 20px;
   }
 
   .name {
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -229,7 +229,7 @@
 /* Mobile styles */
 @media only screen and (max-width: 480px) {
   .intro-container {
-    min-height: 600px;
+    min-height: 450px;
     padding: 30px 0;
   }
 
@@ -245,17 +245,17 @@
   }
 
   .intro-heading {
-    font-size: 60px;
+    font-size: 40px;
     letter-spacing: 2px;
   }
 
   .intro-p {
-    font-size: 16px;
+    font-size: 12px;
     padding-top: 15px;
   }
 
   .name {
-    font-size: 20px;
+    font-size: 14px;
     margin-bottom: 15px;
   }
 }
@@ -263,7 +263,7 @@
 /* Small mobile styles */
 @media only screen and (max-width: 360px) {
   .intro-container {
-    min-height: 550px;
+    min-height: 400px;
     padding: 20px 0;
   }
 
@@ -277,17 +277,17 @@
   }
 
   .intro-heading {
-    font-size: 50px;
+    font-size: 35px;
     letter-spacing: 1px;
   }
 
   .intro-p {
-    font-size: 14px;
+    font-size: 11px;
     padding-top: 10px;
   }
 
   .name {
-    font-size: 18px;
+    font-size: 12px;
     margin-bottom: 10px;
   }
 }

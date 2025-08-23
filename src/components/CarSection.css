@@ -19,7 +19,7 @@
 }
 
 .car-section-title {
-  font-size: 60px;
+  font-size: 50px;
   font-family: "Luckiest Guy", serif;
   color: #ecf0f1;
   margin-bottom: 15px;
@@ -551,7 +551,7 @@
 /* Large desktop styles */
 @media only screen and (max-width: 1536px) {
   .car-section-title {
-    font-size: 55px;
+    font-size: 45px;
   }
 
   .car-icon {
@@ -611,7 +611,7 @@
 /* Desktop styles */
 @media only screen and (max-width: 1200px) {
   .car-section-title {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .car-section-subtitle {
@@ -667,7 +667,7 @@
   }
 
   .car-section-title {
-    font-size: 45px;
+    font-size: 35px;
   }
 
   .car-icon {
@@ -816,7 +816,7 @@
   }
 
   .car-section-title {
-    font-size: 40px;
+    font-size: 32px;
     flex-direction: column;
     gap: 10px;
   }
@@ -969,7 +969,7 @@
   }
 
   .car-section-title {
-    font-size: 35px;
+    font-size: 28px;
   }
 
   .car-icon {
@@ -1042,7 +1042,7 @@
 /* Small mobile styles */
 @media only screen and (max-width: 360px) {
   .car-section-title {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .car-section-main {

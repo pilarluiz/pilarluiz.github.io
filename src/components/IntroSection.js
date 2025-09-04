@@ -76,7 +76,7 @@ function IntroSection() {
             software engineering, and robotics.
           </p>
           <p className="intro-p education-p">
-            I'm currently pursuing an <b>MS in Computer Engineering</b> from the
+            I'm currently pursuing an <b>MS in Electrical & Computer Engineering</b> from the
             University of Illinois Urbana-Champaign with a focus in computer
             architecture and parallel programming. I received my{" "}
             <b>BS in Computer Engineering & Computer Science</b> from the

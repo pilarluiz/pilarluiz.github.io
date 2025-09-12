@@ -19,7 +19,7 @@
 }
 
 .car-section-title {
-  font-size: 50px;
+  font-size: 42px;
   font-family: "Luckiest Guy", serif;
   color: #ecf0f1;
   margin-bottom: 15px;
@@ -35,7 +35,7 @@
 }
 
 .car-section-subtitle {
-  font-size: 28px;
+  font-size: 22px;
   color: #bdc3c7;
   font-family: "Voltaire", sans-serif;
   margin: 0;
@@ -523,7 +523,7 @@
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
@@ -567,7 +567,7 @@
   }
 
   .car-section-subtitle {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .tiktok-grid {
@@ -623,7 +623,7 @@
   }
 
   .car-section-subtitle {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .car-section-main {
@@ -732,7 +732,7 @@
 
   .social-button {
     padding: 12px 20px;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 

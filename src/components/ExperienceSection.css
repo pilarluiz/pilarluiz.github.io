@@ -406,3 +406,41 @@
     top: 3px;
   }
 }
+
+/* Company logo styles */
+.company-logo {
+  height: 24px;
+  width: auto;
+  margin-left: 12px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Responsive logo sizes */
+@media only screen and (max-width: 1200px) {
+  .company-logo {
+    height: 22px;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .company-logo {
+    height: 20px;
+    margin-left: 8px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .company-logo {
+    height: 18px;
+    margin-left: 6px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .company-logo {
+    height: 16px;
+    margin-left: 5px;
+  }
+}

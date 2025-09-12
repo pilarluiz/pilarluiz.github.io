@@ -60,6 +60,26 @@ function ExperienceSection() {
               onClick={() => setActiveTab(experience.id)}
             >
               {experience.company}
+              {experience.company === "NVIDIA (2025)" ||
+              experience.company === "NVIDIA (2021)" ? (
+                <img
+                  src="/images/nvidia.png"
+                  alt="NVIDIA"
+                  className="company-logo"
+                />
+              ) : experience.company === "Meta" ? (
+                <img
+                  src="/images/meta.png"
+                  alt="Meta"
+                  className="company-logo"
+                />
+              ) : experience.company === "Applied Invention" ? (
+                <img
+                  src="/images/ai.png"
+                  alt="Applied Invention"
+                  className="company-logo"
+                />
+              ) : null}
             </button>
           ))}
         </div>

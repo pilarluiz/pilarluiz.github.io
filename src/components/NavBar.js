@@ -20,6 +20,11 @@ function NavBar() {
         <Navbar.Brand href="/">Pilar Luiz</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/projects" className="nav-link-left">
+              Projects
+            </Nav.Link>
+          </Nav>
           <Nav className="ml-auto">
             <Nav.Link href="mailto:pilarluiz13@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />

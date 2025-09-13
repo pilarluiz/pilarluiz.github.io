@@ -23,6 +23,10 @@
   color: #f1642e !important;
 }
 
+.nav-link-left {
+  font-weight: normal !important;
+}
+
 .fa-icon {
   margin-left: 0.5rem;
   font-size: 1.3rem;

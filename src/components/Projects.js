@@ -15,6 +15,7 @@ function Projects() {
     React: "#2196f3",
     Robotics: "#795548",
     "C++": "#607d8b",
+    C: "#555555",
     Verilog: "black",
   };
 
@@ -50,10 +51,11 @@ function Projects() {
       title:
         "Embedded Systems Design Laboratory (Senior Capstone): Sleep Right",
       image: "/images/sleep-right.png",
-      tags: ["Electronics"],
+      tags: ["Electronics", "C"],
       description:
         "Full restoration and modification of a classic car with modern upgrades",
-      imagePosition: "zoom-out-simple", // Simple zoom out with border
+      imagePosition: "zoom-out-simple", // Add zoom-out for smaller display
+      slug: "sleep-right", // URL slug for routing
     },
     // TODO: Add distributed systems class project?
     // {
@@ -87,13 +89,13 @@ function Projects() {
       tags: ["Research", "Python", "Machine Learning"],
       description: "TODO",
     },
-    {
-      id: 8,
-      title: "Backyard Halfpipe",
-      image: "/images/halfpipe.png",
-      tags: ["Mechanical"],
-      description: "TODO",
-    },
+    // {
+    //   id: 8,
+    //   title: "Backyard Halfpipe",
+    //   image: "/images/halfpipe.png",
+    //   tags: ["Mechanical"],
+    //   description: "TODO",
+    // },
     {
       id: 10,
       title: "Schedule Gurus",

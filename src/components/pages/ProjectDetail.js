@@ -21,6 +21,29 @@ I implemented the short horizon planner that incorporates Safety Barrier Certifi
     githubLink: "https://github.com/baskinburak/mrnav", // GitHub repository
     liveDemo: null, // Add if available
   },
+  "sleep-right": {
+    id: 4,
+    title: "Embedded Systems Design Laboratory (Senior Capstone): Sleep Right",
+    image: "/images/sleep-right.png",
+    overview:
+      "Sleep Right is a prototype for a smart wearable device designed to improve sleep quality by waking users during their optimal sleep stage. This was my electrical engineering senior design capstone project for USC's EE 459Lx Embedded Systems Design Laboratory.",
+    courseLink: "https://ece-classes.usc.edu/ee459/", // EE 459Lx course page
+    // videoLink: "", // Add if available
+    // stackImage: "/images/sleep-right-stack.png", // Add if you have architecture diagrams
+    imageClass: "sleep-right-image", // Custom styling for smaller image
+    detailedOverview: `My semester's design theme was "a smart device that benefits the environment in some manner." Our team chose to go the health route, focusing on sleep quality, specifically optimal wakeup times. The goal was to address jarring wake-ups that interrupt deep sleep cycles, leaving people groggy and tired.
+
+We developed a wearable prototype that monitors sleep patterns and intelligently wakes users during their lightest sleep phase within a specified time window. The system used an ATMega328P microcontroller with inputs from a pulse sensor, real-time clock, rotary encoder, and buttons, with outputs to a haptic motor for wake-up alerts and LCD for user interface.
+
+I was responsible for most of the software stack, including sanitizing heart rate inputs, calculating running averages, and implementing the sleep stage detection algorithms that classified user sleep phases based on heart rate patterns.
+
+The outcome was a working prototype that successfully demonstrated intelligent wake-up functionality. In retrospect, we recognized that reliable sleep stage detection requires additional inputs beyond heart rate, such as accelerometers to detect movement and more sophisticated algorithms for personalized sleep pattern recognition. While our prototype validated the core concept, transitioning to a functional consumer product would require significant additional development.`,
+    techStack: ["Embedded C", "ATMega328P"], // Core technologies
+    reportLink: "/documents/SleepRight_FinalReport.pdf", // Final project report
+    paperLink: null, // Add if available
+    githubLink: "https://github.com/pilarluiz/sleep-right", // GitHub repository
+    liveDemo: null, // Add if available
+  },
 };
 
 function ProjectDetail() {
@@ -56,6 +79,24 @@ function ProjectDetail() {
                 .map((part, index, array) =>
                   index === array.length - 1 ? (
                     part
+                      .split("EE 459Lx Embedded Systems Design Laboratory")
+                      .map((subpart, subindex, subarray) =>
+                        subindex === subarray.length - 1 ? (
+                          subpart
+                        ) : (
+                          <>
+                            {subpart}
+                            <a
+                              href={project.courseLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="resl-link"
+                            >
+                              EE 459Lx Embedded Systems Design Laboratory
+                            </a>
+                          </>
+                        )
+                      )
                   ) : (
                     <>
                       {part}
@@ -92,7 +133,7 @@ function ProjectDetail() {
             <img
               src={project.image}
               alt={project.title}
-              className="project-detail-image"
+              className={`project-detail-image ${project.imageClass || ""}`}
             />
           )}
         </div>
@@ -132,6 +173,16 @@ function ProjectDetail() {
           <section className="project-section">
             <h2>Links</h2>
             <div className="project-links">
+              {project.reportLink && (
+                <a
+                  href={project.reportLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link-button"
+                >
+                  Project Report
+                </a>
+              )}
               {project.paperLink && (
                 <a
                   href={project.paperLink}
@@ -159,7 +210,7 @@ function ProjectDetail() {
                   rel="noopener noreferrer"
                   className="project-link-button"
                 >
-                  View Code
+                  GitHub
                 </a>
               )}
               {project.liveDemo && (
@@ -180,6 +231,16 @@ function ProjectDetail() {
                   className="project-link-button"
                 >
                   RESL Lab
+                </a>
+              )}
+              {project.courseLink && (
+                <a
+                  href={project.courseLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link-button"
+                >
+                  Course Info
                 </a>
               )}
             </div>

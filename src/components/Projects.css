@@ -92,6 +92,15 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
+.project-tile.clickable {
+  cursor: pointer;
+}
+
+.project-tile.clickable:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
 .project-image-container {
   width: 100%;
   aspect-ratio: 1;

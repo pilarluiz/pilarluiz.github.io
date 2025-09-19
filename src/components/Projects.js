@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Projects.css";
 
 function Projects() {
   const [selectedTags, setSelectedTags] = useState([]);
+  const navigate = useNavigate();
   const tagColors = {
-    Hardware: "#e74c3c",
     Electronics: "#f39c12",
     Mechanical: "#27ae60",
     Research: "#9b59b6",
@@ -14,18 +15,18 @@ function Projects() {
     React: "#2196f3",
     Robotics: "#795548",
     "C++": "#607d8b",
-    Verilog: "black", // TODO: Fix this color
+    Verilog: "black",
   };
 
   const projects = [
-    {
-      id: 1,
-      title: "1997 Mazda Miata",
-      image: "/images/car-project.jpg",
-      tags: ["Electronics", "Mechanical"],
-      description:
-        "Full restoration and modification of a classic car with modern upgrades",
-    },
+    // {
+    //   id: 1,
+    //   title: "1997 Mazda Miata",
+    //   image: "/images/car-project.jpg",
+    //   tags: ["Electronics", "Mechanical"],
+    //   description:
+    //     "Full restoration and modification of a classic car with modern upgrades",
+    // },
     // {
     //   id: 2,
     //   title: "Espresso Machine",
@@ -42,6 +43,7 @@ function Projects() {
       description:
         "Multi-robot collision and deadlock-free navigation system for cluttered environments with hierarchical planning and control",
       videoLink: "https://www.youtube.com/watch?v=6WC0YCEctoE",
+      slug: "mrnav", // URL slug for routing
     },
     {
       id: 4,
@@ -119,6 +121,13 @@ function Projects() {
     );
   };
 
+  // Handle project click
+  const handleProjectClick = (project) => {
+    if (project.slug) {
+      navigate(`/projects/${project.slug}`);
+    }
+  };
+
   return (
     <div className="projects-container">
       <div className="projects-content">
@@ -152,7 +161,11 @@ function Projects() {
 
         <div className="projects-grid">
           {filteredProjects.map((project) => (
-            <div key={project.id} className="project-tile">
+            <div
+              key={project.id}
+              className={`project-tile ${project.slug ? "clickable" : ""}`}
+              onClick={() => handleProjectClick(project)}
+            >
               <div className="project-image-container">
                 <img
                   src={project.image}

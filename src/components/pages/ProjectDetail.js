@@ -44,6 +44,29 @@ The outcome was a working prototype that successfully demonstrated intelligent w
     githubLink: "https://github.com/pilarluiz/sleep-right", // GitHub repository
     liveDemo: null, // Add if available
   },
+  sudoku: {
+    id: 9,
+    title: "Sindoku: FPGA Sudoku Game",
+    image: "/images/sudoku.PNG",
+    overview:
+      "Sindoku is a hardware-based Sudoku game implemented on FPGA using Verilog. This was my final project for USC's EE354: Introduction to Digital Circuits course, demonstrating digital logic design and FPGA programming skills.",
+    courseLink: "https://web-app.usc.edu/soc/syllabus/20221/30978.pdf", // EE354 course syllabus
+    // videoLink: "", // Add if available
+    // stackImage: "/images/sudoku-stack.png", // Add if you have architecture diagrams
+    imageClass: "sudoku-image", // Custom styling for smaller image
+    detailedOverview: `Our project SINdoku uses a VGA monitor to display a sudoku puzzle that the user can solve using the Nexys-4 FPGA board. The player can use the left, right, up, and down buttons on the board to move to different cells in the puzzle and enter numbers by pressing the center button after using the FPGA switches to select a number.
+
+After filling out all the empty cells on the board, the user can flip the "check solution" switch to verify their puzzle with the solution. If the user was correct, an LED on the board lights up to indicate success. Otherwise, a different LED lights up to indicate an incorrect answer.
+
+I was responsible for the display implementation, including the VGA controller and rendering system. A major challenge was drawing the numbers on screen - since Sudoku doesn't have many repeating patterns, much of the number generation was manual and tedious work. Creating the game puzzles also required significant manual effort.
+
+The outcome was a fully functional hardware-based Sudoku game that demonstrated digital design skills, VGA interfacing, and complex graphics implementation on FPGA. In retrospect, I would have imported number sprites to avoid wasting "human clocks" on manual digit creation. The project name "SINdoku" was a reference to our professor's emphasis on not wasting hardware clock cycles.`,
+    techStack: ["Verilog", "FPGA", "VGA"], // Core technologies with graphics focus
+    reportLink: "/documents/SINdoku_ProjectReport.pdf", // Final project report
+    paperLink: null, // Add if available
+    githubLink: "https://github.com/pilarluiz/SINdoku", // GitHub repository
+    liveDemo: null, // Add if available
+  },
 };
 
 function ProjectDetail() {
@@ -83,6 +106,48 @@ function ProjectDetail() {
                       .map((subpart, subindex, subarray) =>
                         subindex === subarray.length - 1 ? (
                           subpart
+                            .split(
+                              "Introduction to Digital Circuits course (EE354)"
+                            )
+                            .map((coursepart, courseindex, coursearray) =>
+                              courseindex === coursearray.length - 1 ? (
+                                coursepart
+                                  .split(
+                                    "EE354: Introduction to Digital Circuits course"
+                                  )
+                                  .map((ee354part, ee354index, ee354array) =>
+                                    ee354index === ee354array.length - 1 ? (
+                                      ee354part
+                                    ) : (
+                                      <>
+                                        {ee354part}
+                                        <a
+                                          href={project.courseLink}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="resl-link"
+                                        >
+                                          EE354: Introduction to Digital
+                                          Circuits course
+                                        </a>
+                                      </>
+                                    )
+                                  )
+                              ) : (
+                                <>
+                                  {coursepart}
+                                  <a
+                                    href={project.courseLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="resl-link"
+                                  >
+                                    Introduction to Digital Circuits course
+                                    (EE354)
+                                  </a>
+                                </>
+                              )
+                            )
                         ) : (
                           <>
                             {subpart}

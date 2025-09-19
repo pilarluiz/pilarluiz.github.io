@@ -68,11 +68,12 @@ function Projects() {
     // },
     {
       id: 9,
-      title: "Digital Circuits Final Project: Sudoku (FPGA)",
+      title: "Sindoku: FPGA Sudoku Game",
       image: "/images/sudoku.PNG",
       tags: ["Electronics", "Verilog"],
       description: "TODO",
       imagePosition: "zoom-out-simple", // Simple zoom out with border
+      slug: "sudoku", // URL slug for routing
     },
     {
       id: 6,

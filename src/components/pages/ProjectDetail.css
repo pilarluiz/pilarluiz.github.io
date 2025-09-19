@@ -121,6 +121,12 @@
   display: block;
 }
 
+.sudoku-image {
+  width: 60% !important;
+  margin: 0 auto;
+  display: block;
+}
+
 .project-detail-body {
   color: white;
   font-family: "Questrial", serif;

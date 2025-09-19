@@ -67,6 +67,36 @@ The outcome was a fully functional hardware-based Sudoku game that demonstrated 
     githubLink: "https://github.com/pilarluiz/SINdoku", // GitHub repository
     liveDemo: null, // Add if available
   },
+  "wizards-chess": {
+    id: 6,
+    title: "Wizard's Chess",
+    image: "/images/WizardChess.jpeg",
+    overview:
+      "A real-life version of Wizard's Chess from Harry Potter, where chess pieces move autonomously across a board as dictated by player voice commands. This was a project for USC's electronics hobbyist club Makers. The project integrated web development, voice recognition, robotics, and mechanical engineering on a team of ~10 students.",
+    makersLink: "https://viterbimakers.usc.edu/", // USC Makers club
+    // courseLink: "", // Add if you have course page
+    videoLink: "https://www.youtube.com/watch?v=f9krP_1CuyY", // YouTube demonstration
+    // stackImage: "/images/wizards-chess-stack.png", // Add if you have architecture diagrams
+    imageClass: "wizards-chess-image", // Custom styling for smaller image
+    detailedOverview: `The goal was to create a real-life version of Wizard's Chess from Harry Potter, where chess pieces move autonomously across a board as dictated by player voice commands. This required integrating web development, voice recognition, robotics, and mechanical engineering into a cohesive system.
+
+Players interact with a React web application that features voice recognition logic and displays the game board. Voice commands are processed and sent via HTTP requests to a Python Flask server running on a Raspberry Pi. The server controls stepper motors and electromagnets that move pieces across the physical board using magnetic attraction.
+
+Each chess piece contains a magnet at its bottom that is attracted by electromagnets moving underneath the board. When pieces are captured, they dramatically break open by reversing the electromagnet polarity to flip the internal magnet and trigger the 3D-printed hinged sides to fall open.
+
+The outcome was a fully functional autonomous chess system that successfully demonstrated voice-controlled gameplay, precise robotic movement, and theatrical piece capture mechanics. The project showcased integration of multiple engineering disciplines in a complex, entertaining application.`,
+    techStack: [
+      "React",
+      "Python",
+      "Raspberry Pi",
+      "Robotics",
+      "Voice Recognition",
+    ], // Full stack with robotics focus
+    reportLink: null, // Add if available
+    paperLink: null, // Add if available
+    githubLink: "https://github.com/uscmakers/WizardsChess", // GitHub repository
+    liveDemo: null, // Add if available
+  },
 };
 
 function ProjectDetail() {
@@ -118,6 +148,30 @@ function ProjectDetail() {
                                   .map((ee354part, ee354index, ee354array) =>
                                     ee354index === ee354array.length - 1 ? (
                                       ee354part
+                                        .split("Makers")
+                                        .map(
+                                          (
+                                            makerspart,
+                                            makersindex,
+                                            makersarray
+                                          ) =>
+                                            makersindex ===
+                                            makersarray.length - 1 ? (
+                                              makerspart
+                                            ) : (
+                                              <>
+                                                {makerspart}
+                                                <a
+                                                  href={project.makersLink}
+                                                  target="_blank"
+                                                  rel="noopener noreferrer"
+                                                  className="resl-link"
+                                                >
+                                                  Makers
+                                                </a>
+                                              </>
+                                            )
+                                        )
                                     ) : (
                                       <>
                                         {ee354part}
@@ -306,6 +360,16 @@ function ProjectDetail() {
                   className="project-link-button"
                 >
                   Course Info
+                </a>
+              )}
+              {project.makersLink && (
+                <a
+                  href={project.makersLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link-button"
+                >
+                  USC Makers
                 </a>
               )}
             </div>

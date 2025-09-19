@@ -82,6 +82,7 @@ function Projects() {
       tags: ["Robotics", "C++", "Electronics"],
       description:
         "Autonomous robot system with sensor integration and control algorithms",
+      slug: "wizards-chess", // URL slug for routing
     },
     {
       id: 7,

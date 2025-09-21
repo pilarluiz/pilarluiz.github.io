@@ -23,7 +23,7 @@ I implemented the short horizon planner that incorporates Safety Barrier Certifi
   },
   "sleep-right": {
     id: 4,
-    title: "Embedded Systems Design Laboratory (Senior Capstone): Sleep Right",
+    title: "Sleep Right",
     image: "/images/sleep-right.png",
     overview:
       "Sleep Right is a prototype for a smart wearable device designed to improve sleep quality by waking users during their optimal sleep stage. This was my electrical engineering senior design capstone project for USC's EE 459Lx Embedded Systems Design Laboratory.",
@@ -122,6 +122,37 @@ The outcome was a fully functional web application that successfully generated c
     githubLink: "https://github.com/schedule-gurus/usc-schedule-planner", // GitHub repository
     liveDemo: "https://303.itpwebdev.com/~pluiz/gui/main", // Live demo from README
   },
+  "qd-marl": {
+    id: 7,
+    title: "Quality-Diversity Multi-Agent RL",
+    image: "/images/qd-ma-rl.gif",
+    overview:
+      "Quality-Diversity Multi-Agent Reinforcement Learning is a researchproject investigating how to train multiple agents simultaneously using reinforcement learning while encouraging diversity in behaviors. This research project was conducted with the Automatic Coordination of Teams Laboratory (now at Brown University) under Professor Nora Ayanian and Ph.D. student Eric Ewing.",
+    actLabLink: "http://act.cs.brown.edu/", // ACT Lab at Brown University
+    detailedOverview: `The goal was to train multiple agents simultaneously using reinforcement learning while encouraging diversity in behaviors. The project focused on developing a Quality-Diversity framework for multi-agent systems that balances exploration of new approaches with optimization of performance.
+
+The methodology involved characterizing teams, adding them to an archive, and then selecting teams for retraining through two pathways: maximizing diversity (p=0.5) to encourage new behavioral approaches, and optimizing quality (p=0.5) to maximize expected rewards. Teams were evaluated and compared in terms of both quality and behavior, with updates to a Pareto front representing the trade-off between these objectives.
+
+The experimental environment was a pursuit domain where four predator agents must coordinate to trap a prey agent. The challenge involved reaching goals individually, reacting to other agents' behaviors, forming effective teams, and encouraging diverse approaches to problem-solving.
+
+I was responsible for creating the Pursuit Domain environment to test different theories of multi-agent training and diversity. My specific contribution involved setting up three predator agents with programmed behavior and using reinforcement learning to train one predator agent to coordinate with the other predators. This focused approach allowed us to isolate the learning process for one agent while maintaining the multi-agent coordination challenge.
+
+Key technical challenges included designing the game environment, implementing programmed behaviors for the baseline predators, and developing the reinforcement learning framework for the training predator to learn coordination strategies.
+
+The outcome demonstrated the feasibility of training one agent to coordinate with programmed teammates in the pursuit domain, providing a foundation for extending reinforcement learning to simultaneously train multiple predators as a group. This research contributes to solving the fundamental challenge of multi-agent coordination and sets the groundwork for more complex multi-agent training scenarios.
+
+I presented this research at the 2020 Viterbi Research Showcase and won Best Presentation, recognizing the quality and impact of the work. This was an ongoing project that I planned to continue working on in the fall to deepen my knowledge of Machine Learning and its applications to real-world problems.`,
+    techStack: [
+      "Python",
+      "Machine Learning",
+      "Reinforcement Learning",
+      "Multi-Agent Systems",
+    ],
+    reportLink: null, // Add if available
+    paperLink: null, // Add if available
+    githubLink: null, // Add GitHub link when available
+    liveDemo: null, // Add if available
+  },
 };
 
 function ProjectDetail() {
@@ -183,6 +214,35 @@ function ProjectDetail() {
                                             makersindex ===
                                             makersarray.length - 1 ? (
                                               makerspart
+                                                .split(
+                                                  "Automatic Coordination of Teams Laboratory"
+                                                )
+                                                .map(
+                                                  (
+                                                    actpart,
+                                                    actindex,
+                                                    actarray
+                                                  ) =>
+                                                    actindex ===
+                                                    actarray.length - 1 ? (
+                                                      actpart
+                                                    ) : (
+                                                      <>
+                                                        {actpart}
+                                                        <a
+                                                          href={
+                                                            project.actLabLink
+                                                          }
+                                                          target="_blank"
+                                                          rel="noopener noreferrer"
+                                                          className="resl-link"
+                                                        >
+                                                          Automatic Coordination
+                                                          of Teams Laboratory
+                                                        </a>
+                                                      </>
+                                                    )
+                                                )
                                             ) : (
                                               <>
                                                 {makerspart}
@@ -277,8 +337,31 @@ function ProjectDetail() {
             <img
               src={project.image}
               alt={project.title}
-              className={`project-detail-image ${project.imageClass || ""}`}
+              className={`project-detail-image ${project.imageClass || ""} ${
+                projectId === "qd-marl" ? "qd-marl-gif" : ""
+              }`}
             />
+          )}
+
+          {/* Legend for QD MA RL project */}
+          {projectId === "qd-marl" && (
+            <div className="agent-legend">
+              <h4>Agent Legend:</h4>
+              <div className="legend-items">
+                <div className="legend-item">
+                  <div className="legend-color brown"></div>
+                  <span>Prey Agent</span>
+                </div>
+                <div className="legend-item">
+                  <div className="legend-color black"></div>
+                  <span>Programmed Predator Agents</span>
+                </div>
+                <div className="legend-item">
+                  <div className="legend-color purple"></div>
+                  <span>Predator Agent in Training</span>
+                </div>
+              </div>
+            </div>
           )}
         </div>
 
@@ -395,6 +478,16 @@ function ProjectDetail() {
                   className="project-link-button"
                 >
                   USC Makers
+                </a>
+              )}
+              {project.actLabLink && (
+                <a
+                  href={project.actLabLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link-button"
+                >
+                  ACT Lab
                 </a>
               )}
             </div>

@@ -48,8 +48,7 @@ function Projects() {
     },
     {
       id: 4,
-      title:
-        "Embedded Systems Design Laboratory (Senior Capstone): Sleep Right",
+      title: "Sleep Right (Senior Capstone)",
       image: "/images/sleep-right.png",
       tags: ["Electronics", "C"],
       description:
@@ -87,9 +86,10 @@ function Projects() {
     {
       id: 7,
       title: "Quality-Diversity Multi-Agent RL",
-      image: "/images/qd-rl.png",
+      image: "/images/qd-ma-rl.gif",
       tags: ["Research", "Python", "Machine Learning"],
       description: "TODO",
+      slug: "qd-marl", // URL slug for routing
     },
     // {
     //   id: 8,

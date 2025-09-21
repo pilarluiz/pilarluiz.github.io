@@ -213,6 +213,75 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Agent Legend Styling */
+.agent-legend {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.agent-legend h4 {
+  color: #e0e0e0;
+  font-family: "Questrial", serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.legend-color.brown {
+  background-color: #8b4513;
+}
+
+.legend-color.black {
+  background-color: #000000;
+}
+
+.legend-color.purple {
+  background-color: #800080;
+}
+
+.legend-item span {
+  color: #e0e0e0;
+  font-family: "Questrial", serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* QD MA RL GIF Styling */
+.qd-marl-gif {
+  width: 50% !important;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
 /* Responsive styles */
 @media only screen and (max-width: 1200px) {
   .project-detail-content {

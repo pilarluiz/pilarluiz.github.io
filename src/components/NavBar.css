@@ -58,8 +58,11 @@
   }
 
   .fa-icon {
-    margin-left: 0.25rem;
+    margin-left: 0;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar-collapse {
@@ -79,7 +82,10 @@
 
   .navbar-nav .ml-auto {
     justify-content: center;
+    align-items: center;
     gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -95,10 +101,18 @@
 
   .fa-icon {
     font-size: 1rem;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar-nav .ml-auto {
     gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 

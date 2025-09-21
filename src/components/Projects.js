@@ -79,7 +79,7 @@ function Projects() {
       id: 6,
       title: "Wizard's Chess",
       image: "/images/WizardChess.jpeg",
-      tags: ["Robotics", "C++", "Electronics"],
+      tags: ["Robotics", "Python", "Electronics"],
       description:
         "Autonomous robot system with sensor integration and control algorithms",
       slug: "wizards-chess", // URL slug for routing
@@ -104,6 +104,7 @@ function Projects() {
       image: "/images/ScheduleGurus.png",
       tags: ["Web Development"],
       description: "TODO",
+      slug: "schedule-gurus", // URL slug for routing
     },
   ];
 

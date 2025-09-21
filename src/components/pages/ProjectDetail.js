@@ -97,6 +97,31 @@ The outcome was a fully functional autonomous chess system that successfully dem
     githubLink: "https://github.com/uscmakers/WizardsChess", // GitHub repository
     liveDemo: null, // Add if available
   },
+  "schedule-gurus": {
+    id: 10,
+    title: "Schedule Gurus",
+    image: "/images/ScheduleGurus.png",
+    overview:
+      "Schedule Gurus is a full-stack web application that takes a user's list of desired classes and generates functional schedules with no conflicting times. This was my group's final project for USC's CSCI 201: Principles of Software Development, built by a team of 6 students.",
+    // courseLink: "https://web-app.usc.edu/soc/syllabus/20201/30978.pdf", // CSCI 201 course link - removed
+    // videoLink: "https://www.youtube.com/watch?v=7edY_gAJkxA", // Project demonstration video - removed to use image instead
+    detailedOverview: `The goal was to create a web application that automatically generates conflict-free class schedules for USC students. The system needed to take a user's list of desired classes and intelligently create functional schedules without time conflicts.
+
+The frontend features a form where users can input their desired classes. This uses JavaScript XMLHttpRequest to communicate with the backend Java servlet. We integrated an API to scrape the USC registrar for comprehensive class information, then passed this data to our main algorithm that utilizes bitsets to find possible schedule generations with no conflicting times.
+
+The system includes user authentication with login functionality, allowing users with accounts to save their schedules to the database. Generated schedules are displayed on the frontend with clear time conflict resolution.
+
+I was responsible for building the UI and helped with the database logic and connecting all the pieces. Key technical challenges included implementing the bitset-based scheduling algorithm, integrating with USC's registrar API, managing database connections with PHP, and creating seamless frontend-backend communication.
+
+The schedule algorithm wasn't very sophisticated—it used a brute force approach (greedy algorithm) that was slow but effective. A more optimized algorithm would improve performance in future iterations.
+
+The outcome was a fully functional web application that successfully generated conflict-free schedules for USC students. The project demonstrated full-stack development skills across multiple technologies: HTML/CSS for frontend design, JavaScript for client-server communication, PHP for database operations, Java for backend servlets, and Python for additional backend processing.`,
+    techStack: ["HTML", "CSS", "JavaScript", "PHP", "Java", "Python"], // Complete tech stack from description
+    reportLink: null, // Add if available
+    paperLink: null, // Add if available
+    githubLink: "https://github.com/schedule-gurus/usc-schedule-planner", // GitHub repository
+    liveDemo: "https://303.itpwebdev.com/~pluiz/gui/main", // Live demo from README
+  },
 };
 
 function ProjectDetail() {

@@ -5,17 +5,26 @@ import "./Projects.css";
 function Projects() {
   const navigate = useNavigate();
   const tagColors = {
-    Electronics: "#f39c12",
-    Mechanical: "#27ae60",
-    Research: "#9b59b6",
-    "Machine Learning": "#e67e22",
-    Python: "#2ecc71",
-    "Web Development": "#e91e63",
-    React: "#2196f3",
-    Robotics: "#795548",
-    "C++": "#607d8b",
-    C: "#555555",
-    Verilog: "black",
+    Electronics: "#ff6b6b",
+    Mechanical: "#4ecdc4",
+    Research: "#45b7d1",
+    "Machine Learning": "#96ceb4",
+    Python: "#feca57",
+    "Web Development": "#ff9ff3",
+    React: "#54a0ff",
+    Robotics: "#5f27cd",
+    "C++": "#e74c3c",
+    "Embedded C": "#ff9f43",
+    Verilog: "#a55eea",
+    "Multi-Agent Systems": "#9b59b6",
+    "Reinforcement Learning": "#fd79a8",
+    "Raspberry Pi": "#fdcb6e",
+    JavaScript: "#e17055",
+    Java: "#74b9ff",
+    FPGA: "#a29bfe",
+    VGA: "#fd79a8",
+    ROS: "#f39c12",
+    ATMega328P: "#e84393",
   };
 
   const projects = [
@@ -39,17 +48,18 @@ function Projects() {
       id: 3,
       title: "MRNAV: Multi-Robot Aware Planning and Control Stack",
       image: "https://img.youtube.com/vi/6WC0YCEctoE/maxresdefault.jpg",
-      tags: ["Research", "Robotics", "C++"],
+      tags: ["C++", "ROS", "Multi-Agent Systems"],
       description:
         "Multi-robot collision and deadlock-free navigation system for cluttered environments with hierarchical planning and control",
       videoLink: "https://www.youtube.com/watch?v=6WC0YCEctoE",
       slug: "mrnav", // URL slug for routing
+      date: "2022 - 2023",
     },
     {
       id: 4,
       title: "Sleep Right (Senior Capstone)",
       image: "/images/sleep-right.png",
-      tags: ["Electronics", "C"],
+      tags: ["Embedded C", "ATMega328P"],
       description:
         "Full restoration and modification of a classic car with modern upgrades",
       imagePosition: "zoom-out-simple", // Add zoom-out for smaller display
@@ -69,7 +79,7 @@ function Projects() {
       id: 9,
       title: "Sindoku: FPGA Sudoku Game",
       image: "/images/sudoku.PNG",
-      tags: ["Electronics", "Verilog"],
+      tags: ["Verilog", "FPGA", "VGA"],
       description: "TODO",
       imagePosition: "zoom-out-simple", // Simple zoom out with border
       slug: "sudoku", // URL slug for routing
@@ -79,18 +89,20 @@ function Projects() {
       id: 6,
       title: "Wizard's Chess",
       image: "/images/WizardChess.jpeg",
-      tags: ["Robotics", "Python", "Electronics"],
+      tags: ["Python", "Raspberry Pi", "React"],
       description:
         "Autonomous robot system with sensor integration and control algorithms",
       slug: "wizards-chess", // URL slug for routing
+      date: "Fall 2020 - Spring 2021",
     },
     {
       id: 7,
       title: "Quality-Diversity Multi-Agent RL",
       image: "/images/qd-ma-rl.gif",
-      tags: ["Research", "Python", "Machine Learning"],
+      tags: ["Python", "Machine Learning", "Reinforcement Learning"],
       description: "TODO",
       slug: "qd-marl", // URL slug for routing
+      date: "Summer 2020",
     },
     // {
     //   id: 8,
@@ -103,7 +115,7 @@ function Projects() {
       id: 10,
       title: "Schedule Gurus",
       image: "/images/ScheduleGurus.png",
-      tags: ["Web Development"],
+      tags: ["JavaScript", "Java", "Python"],
       description: "TODO",
       slug: "schedule-gurus", // URL slug for routing
       date: "Fall 2020",

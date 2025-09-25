@@ -8,6 +8,7 @@ const projectsData = {
     id: 3,
     title: "MRNAV: Multi-Robot Aware Planning and Control Stack",
     image: "https://img.youtube.com/vi/6WC0YCEctoE/maxresdefault.jpg",
+    date: "2022 - 2023",
     overview:
       "MRNAV is collision- and deadlock-free navigation stack for multi-robot teams in cluttered environments. I collaborated on this research project at USC with the Robotic Embedded Systems Laboratory.",
     reslLink: "https://robotics.usc.edu/resl/",
@@ -32,7 +33,7 @@ I implemented the short horizon planner that incorporates Safety Barrier Certifi
     // videoLink: "", // Add if available
     // stackImage: "/images/sleep-right-stack.png", // Add if you have architecture diagrams
     imageClass: "sleep-right-image", // Custom styling for smaller image
-    detailedOverview: `My semester's design theme was "a smart device that benefits the environment in some manner." Our team chose to go the health route, focusing on sleep quality, specifically optimal wakeup times. The goal was to address jarring wake-ups that interrupt deep sleep cycles, leaving people groggy and tired.
+    detailedOverview: `My semester's design theme was "a smart device that benefits the environment in some manner." Our team chose to go the health route, focusing on sleep quality, specifically optimal wake-up times. The goal was to address jarring wake-ups that interrupt deep sleep cycles, leaving people groggy and tired.
 
 We developed a wearable prototype that monitors sleep patterns and intelligently wakes users during their lightest sleep phase within a specified time window. The system used an ATMega328P microcontroller with inputs from a pulse sensor, real-time clock, rotary encoder, and buttons, with outputs to a haptic motor for wake-up alerts and LCD for user interface.
 
@@ -60,7 +61,7 @@ The outcome was a working prototype that successfully demonstrated intelligent w
 
 After filling out all the empty cells on the board, the user can flip the "check solution" switch to verify their puzzle with the solution. If the user was correct, an LED on the board lights up to indicate success. Otherwise, a different LED lights up to indicate an incorrect answer.
 
-I was responsible for the display implementation, including the VGA controller and rendering system. A major challenge was drawing the numbers on screen - since Sudoku doesn't have many repeating patterns, much of the number generation was manual and tedious work. Creating the game puzzles also required significant manual effort.
+I was responsible for the display implementation, including the VGA controller and rendering system. A major challenge was drawing the numbers on screen and also creating the puzzles. Since Sudoku doesn't have many repeating patterns, much of the puzzle and testbench generation was manual and tedious work.
 
 The outcome was a fully functional hardware-based Sudoku game that demonstrated digital design skills, VGA interfacing, and complex graphics implementation on FPGA. In retrospect, I would have imported number sprites to avoid wasting "human clocks" on manual digit creation. The project name "SINdoku" was a reference to our professor's emphasis on not wasting hardware clock cycles.`,
     techStack: ["Verilog", "FPGA", "VGA"], // Core technologies with graphics focus
@@ -73,6 +74,7 @@ The outcome was a fully functional hardware-based Sudoku game that demonstrated 
     id: 6,
     title: "Wizard's Chess",
     image: "/images/WizardChess.jpeg",
+    date: "Fall 2020 - Spring 2021",
     overview:
       "A real-life version of Wizard's Chess from Harry Potter, where chess pieces move autonomously across a board as dictated by player voice commands. This was a project for USC's electronics hobbyist club Makers. The project integrated web development, voice recognition, robotics, and mechanical engineering on a team of ~10 students.",
     makersLink: "https://viterbimakers.usc.edu/", // USC Makers club
@@ -86,7 +88,7 @@ Players interact with a React web application that features voice recognition lo
 
 Each chess piece contains a magnet at its bottom that is attracted by electromagnets moving underneath the board. When pieces are captured, they dramatically break open by reversing the electromagnet polarity to flip the internal magnet and trigger the 3D-printed hinged sides to fall open.
 
-The outcome was a fully functional autonomous chess system that successfully demonstrated voice-controlled gameplay, precise robotic movement, and theatrical piece capture mechanics. The project showcased integration of multiple engineering disciplines in a complex, entertaining application.`,
+The outcome was a fully functional autonomous chess system that was an ode to Harry Potter. I was the software subteam lead and was responsible for the voice recognition and web application.`,
     techStack: [
       "React",
       "Python",
@@ -116,9 +118,7 @@ The system includes user authentication with login functionality, allowing users
 
 I was responsible for building the UI and helped with the database logic and connecting all the pieces. Key technical challenges included implementing the bitset-based scheduling algorithm, integrating with USC's registrar API, managing database connections with PHP, and creating seamless frontend-backend communication.
 
-The schedule algorithm wasn't very sophisticated—it used a brute force approach (greedy algorithm) that was slow but effective. A more optimized algorithm would improve performance in future iterations.
-
-The outcome was a fully functional web application that successfully generated conflict-free schedules for USC students. The project demonstrated full-stack development skills across multiple technologies: HTML/CSS for frontend design, JavaScript for client-server communication, PHP for database operations, Java for backend servlets, and Python for additional backend processing.`,
+The outcome was a fully functional web application that successfully generated conflict-free schedules for USC students. The project demonstrated full-stack development skills across multiple technologies: HTML/CSS for frontend design, JavaScript for client-server communication, PHP for database operations, Java for backend servlets, and Python for additional backend processing. In the future, we would try to make the application faster because it took a lot of time to go through all the schedule combinations.`,
     techStack: ["HTML", "CSS", "JavaScript", "PHP", "Java", "Python"], // Complete tech stack from description
     reportLink: null, // Add if available
     paperLink: null, // Add if available
@@ -129,22 +129,19 @@ The outcome was a fully functional web application that successfully generated c
     id: 7,
     title: "Quality-Diversity Multi-Agent RL",
     image: "/images/qd-ma-rl.gif",
+    date: "Summer 2020",
     overview:
       "Quality-Diversity Multi-Agent Reinforcement Learning is a researchproject investigating how to train multiple agents simultaneously using reinforcement learning while encouraging diversity in behaviors. This research project was conducted with the Automatic Coordination of Teams Laboratory (now at Brown University) under Professor Nora Ayanian and Ph.D. student Eric Ewing.",
     actLabLink: "http://act.cs.brown.edu/", // ACT Lab at Brown University
-    detailedOverview: `The goal was to train multiple agents simultaneously using reinforcement learning while encouraging diversity in behaviors. The project focused on developing a Quality-Diversity framework for multi-agent systems that balances exploration of new approaches with optimization of performance.
+    detailedOverview: `This research project investigated training multiple agents simultaneously using reinforcement learning while encouraging behavioral diversity. The goal was to develop a Quality-Diversity framework for multi-agent systems that balances exploration of new approaches with optimization of performance.
 
-The methodology involved characterizing teams, adding them to an archive, and then selecting teams for retraining through two pathways: maximizing diversity (p=0.5) to encourage new behavioral approaches, and optimizing quality (p=0.5) to maximize expected rewards. Teams were evaluated and compared in terms of both quality and behavior, with updates to a Pareto front representing the trade-off between these objectives.
+I created a Pursuit Domain environment where four predator agents must coordinate to trap a prey agent. My specific contribution involved setting up three predator agents with programmed behavior and using reinforcement learning to train one predator agent to coordinate with the others. This focused approach isolated the learning process while maintaining multi-agent coordination challenges.
 
-The experimental environment was a pursuit domain where four predator agents must coordinate to trap a prey agent. The challenge involved reaching goals individually, reacting to other agents' behaviors, forming effective teams, and encouraging diverse approaches to problem-solving.
+Key technical challenges included designing the game environment, implementing programmed behaviors for baseline predators, and developing the reinforcement learning framework for the training predator to learn coordination strategies.
 
-I was responsible for creating the Pursuit Domain environment to test different theories of multi-agent training and diversity. My specific contribution involved setting up three predator agents with programmed behavior and using reinforcement learning to train one predator agent to coordinate with the other predators. This focused approach allowed us to isolate the learning process for one agent while maintaining the multi-agent coordination challenge.
+The outcome demonstrated the feasibility of training one agent to coordinate with programmed teammates, providing a foundation for extending reinforcement learning to simultaneously train multiple predators as a group. This research contributes to solving fundamental multi-agent coordination challenges.
 
-Key technical challenges included designing the game environment, implementing programmed behaviors for the baseline predators, and developing the reinforcement learning framework for the training predator to learn coordination strategies.
-
-The outcome demonstrated the feasibility of training one agent to coordinate with programmed teammates in the pursuit domain, providing a foundation for extending reinforcement learning to simultaneously train multiple predators as a group. This research contributes to solving the fundamental challenge of multi-agent coordination and sets the groundwork for more complex multi-agent training scenarios.
-
-I presented this research at the 2020 Viterbi Research Showcase and won Best Presentation, recognizing the quality and impact of the work. This was an ongoing project that I planned to continue working on in the fall to deepen my knowledge of Machine Learning and its applications to real-world problems.`,
+I presented this research at the 2020 Viterbi Research Showcase and won Best Presentation.`,
     techStack: [
       "Python",
       "Machine Learning",

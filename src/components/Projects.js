@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Projects.css";
 
 function Projects() {
-  const [selectedTags, setSelectedTags] = useState([]);
   const navigate = useNavigate();
   const tagColors = {
     Electronics: "#f39c12",
@@ -55,6 +54,7 @@ function Projects() {
         "Full restoration and modification of a classic car with modern upgrades",
       imagePosition: "zoom-out-simple", // Add zoom-out for smaller display
       slug: "sleep-right", // URL slug for routing
+      date: "Spring 2023",
     },
     // TODO: Add distributed systems class project?
     // {
@@ -73,6 +73,7 @@ function Projects() {
       description: "TODO",
       imagePosition: "zoom-out-simple", // Simple zoom out with border
       slug: "sudoku", // URL slug for routing
+      date: "Spring 2021",
     },
     {
       id: 6,
@@ -105,26 +106,12 @@ function Projects() {
       tags: ["Web Development"],
       description: "TODO",
       slug: "schedule-gurus", // URL slug for routing
+      date: "Fall 2020",
     },
   ];
 
-  // Get all unique tags from projects
-  const allTags = [...new Set(projects.flatMap((project) => project.tags))];
-
-  // Filter projects based on selected tags
-  const filteredProjects =
-    selectedTags.length === 0
-      ? projects
-      : projects.filter((project) =>
-          selectedTags.every((tag) => project.tags.includes(tag))
-        );
-
-  // Handle tag selection
-  const handleTagClick = (tag) => {
-    setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
-  };
+  // Display all projects (no filtering)
+  const filteredProjects = projects;
 
   // Handle project click
   const handleProjectClick = (project) => {
@@ -137,32 +124,6 @@ function Projects() {
     <div className="projects-container">
       <div className="projects-content">
         <h1 className="projects-header">Projects</h1>
-
-        {/* Tag Filter */}
-        <div className="tag-filter-container">
-          <div className="tag-filter">
-            {allTags.map((tag) => (
-              <button
-                key={tag}
-                className={`tag-filter-button ${
-                  selectedTags.includes(tag) ? "active" : ""
-                }`}
-                onClick={() => handleTagClick(tag)}
-                style={{
-                  color: selectedTags.includes(tag)
-                    ? "#fff"
-                    : tagColors[tag] || "#9b59b6",
-                  backgroundColor: selectedTags.includes(tag)
-                    ? tagColors[tag] || "#9b59b6"
-                    : "transparent",
-                  borderColor: tagColors[tag] || "#9b59b6",
-                }}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
-        </div>
 
         <div className="projects-grid">
           {filteredProjects.map((project) => (
@@ -180,6 +141,9 @@ function Projects() {
               </div>
               <div className="project-info">
                 <h3 className="project-title">{project.title}</h3>
+                {project.date && (
+                  <div className="project-date">{project.date}</div>
+                )}
                 <div className="project-tags">
                   {project.tags.map((tag, index) => (
                     <span

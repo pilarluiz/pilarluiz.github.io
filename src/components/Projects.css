@@ -188,8 +188,19 @@
   color: #333333;
   font-size: 24px;
   font-weight: 600;
+  margin-bottom: 12px;
+  font-family: "Questrial", serif;
+}
+
+.project-date {
+  color: #333333;
+  font-size: 18px;
+  font-weight: 400;
   margin-bottom: 16px;
   font-family: "Questrial", serif;
+  font-style: italic;
+  display: block;
+  text-align: left;
 }
 
 .project-tags {
@@ -231,6 +242,10 @@
   .project-title {
     font-size: 22px;
   }
+
+  .project-date {
+    font-size: 17px;
+  }
 }
 
 /* Desktop styles */
@@ -265,6 +280,10 @@
 
   .project-title {
     font-size: 20px;
+  }
+
+  .project-date {
+    font-size: 16px;
   }
 
   .project-tag {
@@ -310,6 +329,11 @@
     margin-bottom: 12px;
   }
 
+  .project-date {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
   .tag-filter-button {
     font-size: 12px;
     padding: 6px 12px;
@@ -352,6 +376,11 @@
 
   .project-title {
     font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .project-date {
+    font-size: 15px;
     margin-bottom: 12px;
   }
 
@@ -407,6 +436,11 @@
     margin-bottom: 10px;
   }
 
+  .project-date {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
   .project-tag {
     font-size: 11px;
     padding: 3px 6px;
@@ -434,6 +468,11 @@
 
   .project-title {
     font-size: 15px;
+  }
+
+  .project-date {
+    font-size: 13px;
+    margin-bottom: 8px;
   }
 
   .project-tag {

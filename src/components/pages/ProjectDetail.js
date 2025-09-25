@@ -25,6 +25,7 @@ I implemented the short horizon planner that incorporates Safety Barrier Certifi
     id: 4,
     title: "Sleep Right",
     image: "/images/sleep-right.png",
+    date: "Spring 2023",
     overview:
       "Sleep Right is a prototype for a smart wearable device designed to improve sleep quality by waking users during their optimal sleep stage. This was my electrical engineering senior design capstone project for USC's EE 459Lx Embedded Systems Design Laboratory.",
     courseLink: "https://ece-classes.usc.edu/ee459/", // EE 459Lx course page
@@ -48,6 +49,7 @@ The outcome was a working prototype that successfully demonstrated intelligent w
     id: 9,
     title: "Sindoku: FPGA Sudoku Game",
     image: "/images/sudoku.PNG",
+    date: "Spring 2021",
     overview:
       "Sindoku is a hardware-based Sudoku game implemented on FPGA using Verilog. This was my final project for USC's EE354: Introduction to Digital Circuits course, demonstrating digital logic design and FPGA programming skills.",
     courseLink: "https://web-app.usc.edu/soc/syllabus/20221/30978.pdf", // EE354 course syllabus
@@ -101,6 +103,7 @@ The outcome was a fully functional autonomous chess system that successfully dem
     id: 10,
     title: "Schedule Gurus",
     image: "/images/ScheduleGurus.png",
+    date: "Fall 2020",
     overview:
       "Schedule Gurus is a full-stack web application that takes a user's list of desired classes and generates functional schedules with no conflicting times. This was my group's final project for USC's CSCI 201: Principles of Software Development, built by a team of 6 students.",
     // courseLink: "https://web-app.usc.edu/soc/syllabus/20201/30978.pdf", // CSCI 201 course link - removed
@@ -181,6 +184,9 @@ function ProjectDetail() {
 
         <div className="project-detail-header">
           <h1 className="project-detail-title">{project.title}</h1>
+          {project.date && (
+            <div className="project-detail-date">{project.date}</div>
+          )}
           {project.overview && (
             <p className="project-overview">
               {project.overview

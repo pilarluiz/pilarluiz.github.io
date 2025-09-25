@@ -97,7 +97,7 @@ function Projects() {
     },
     {
       id: 7,
-      title: "Quality-Diversity Multi-Agent RL",
+      title: "Quality-Diversity Multi-Agent Reinforcement Learning",
       image: "/images/qd-ma-rl.gif",
       tags: ["Python", "Machine Learning", "Reinforcement Learning"],
       description: "TODO",

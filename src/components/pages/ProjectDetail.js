@@ -127,7 +127,7 @@ The outcome was a fully functional web application that successfully generated c
   },
   "qd-marl": {
     id: 7,
-    title: "Quality-Diversity Multi-Agent RL",
+    title: "Quality-Diversity Multi-Agent Reinforcement Learning",
     image: "/images/qd-ma-rl.gif",
     date: "Summer 2020",
     overview:

@@ -25,6 +25,12 @@ function Projects() {
     VGA: "#fd79a8",
     ROS: "#f39c12",
     ATMega328P: "#e84393",
+    LLVM: "#1857b6",
+    Flex: "#ff6b35",
+    "Recursive Descent Parsing": "#ff9f43",
+    SSA: "#a55eea",
+    "Register Allocation": "#26de81",
+    "Compiler Design": "#ff4757",
   };
 
   const projects = [
@@ -54,6 +60,16 @@ function Projects() {
       videoLink: "https://www.youtube.com/watch?v=6WC0YCEctoE",
       slug: "mrnav", // URL slug for routing
       date: "2022 - 2023",
+    },
+    {
+      id: 11,
+      title: "USCC – University Simple C Compiler",
+      image: "/images/uscc.png",
+      tags: ["C++", "LLVM", "Compiler Design"],
+      description:
+        "A simple C compiler built using LLVM for educational purposes",
+      slug: "uscc",
+      date: "Spring 2022",
     },
     {
       id: 4,

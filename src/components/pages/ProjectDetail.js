@@ -22,6 +22,74 @@ I implemented the short horizon planner that incorporates Safety Barrier Certifi
     githubLink: "https://github.com/baskinburak/mrnav", // GitHub repository
     liveDemo: null, // Add if available
   },
+  uscc: {
+    id: 11,
+    title: "USCC – University Simple C Compiler",
+    image: "/images/uscc.png",
+    date: "Spring 2022",
+    overview:
+      "USCC (University Simple C Compiler) is a complete compiler for the University Simple C language, a subset of Standard C. Built as part of USC's ITP 439 Compiler Design course, this project implements all major compiler phases from lexical analysis to LLVM IR generation.",
+    courseLink: "https://itp439-20231.github.io/USCC.html", // ITP 439 course page
+    detailedOverview: (
+      <>
+        USCC was built over six programming assignments (PAs) in USC's ITP 439
+        Compiler Design course, implementing a complete compiler pipeline for
+        the University Simple C language.
+        <br />
+        <br />
+        <strong>PA1 - Recursive Descent Parser:</strong> Implemented a recursive
+        descent parser using Flex for lexical analysis and custom C++ parsing
+        logic. The parser constructs an Abstract Syntax Tree (AST) and handles
+        syntax error recovery with detailed error messages showing exact line
+        and column positions.
+        <br />
+        <br />
+        <strong>PA2 - Semantic Analysis:</strong> Added semantic analysis
+        including type checking, symbol table management, and scope resolution.
+        The compiler validates type consistency, handles function declarations
+        and calls, and manages variable scoping.
+        <br />
+        <br />
+        <strong>PA3 - LLVM IR Generation:</strong> Implemented LLVM IR code
+        generation from the AST. Each AST node has a corresponding LLVM IR
+        generation function that creates basic blocks, instructions, and control
+        flow structures.
+        <br />
+        <br />
+        <strong>PA4 - Static Single Assignment (SSA):</strong> Added SSA form
+        conversion, which is crucial for optimization passes. This involved
+        implementing phi nodes and ensuring each variable has a single
+        definition point.
+        <br />
+        <br />
+        <strong>PA5 - Optimization Passes:</strong> Implemented various LLVM
+        optimization passes including constant folding, dead code elimination,
+        and loop optimizations to improve generated code efficiency.
+        <br />
+        <br />
+        <strong>PA6 - Register Allocation:</strong> Built a custom graph
+        coloring register allocation pass for efficient machine code generation,
+        supporting both x86_64 and ARM64 architectures.
+        <br />
+        <br />
+        The final compiler supports the full University Simple C language
+        including arrays, functions, control structures, and generates optimized
+        LLVM bitcode that can be compiled to executable binaries.
+      </>
+    ),
+    techStack: [
+      "C++",
+      "LLVM",
+      "Flex",
+      "Recursive Descent Parsing",
+      "SSA",
+      "Register Allocation",
+    ],
+    githubLink: "https://github.com/pilarluiz/uscc", // Add GitHub link when available
+    reportLink: null, // Add if available
+    paperLink: null, // Add if available
+    liveDemo: null, // Add if available
+  },
   "sleep-right": {
     id: 4,
     title: "Sleep Right",
@@ -229,6 +297,37 @@ function ProjectDetail() {
                                                     actindex ===
                                                     actarray.length - 1 ? (
                                                       actpart
+                                                        .split(
+                                                          "ITP 439 Compiler Design"
+                                                        )
+                                                        .map(
+                                                          (
+                                                            itppart,
+                                                            itpindex,
+                                                            itparray
+                                                          ) =>
+                                                            itpindex ===
+                                                            itparray.length -
+                                                              1 ? (
+                                                              itppart
+                                                            ) : (
+                                                              <>
+                                                                {itppart}
+                                                                <a
+                                                                  href={
+                                                                    project.courseLink
+                                                                  }
+                                                                  target="_blank"
+                                                                  rel="noopener noreferrer"
+                                                                  className="resl-link"
+                                                                >
+                                                                  ITP 439
+                                                                  Compiler
+                                                                  Design
+                                                                </a>
+                                                              </>
+                                                            )
+                                                        )
                                                     ) : (
                                                       <>
                                                         {actpart}
@@ -336,7 +435,7 @@ function ProjectDetail() {
                 className="project-video"
               ></iframe>
             </div>
-          ) : (
+          ) : projectId !== "uscc" ? (
             <img
               src={project.image}
               alt={project.title}
@@ -344,7 +443,7 @@ function ProjectDetail() {
                 projectId === "qd-marl" ? "qd-marl-gif" : ""
               }`}
             />
-          )}
+          ) : null}
 
           {/* Legend for QD MA RL project */}
           {projectId === "qd-marl" && (

@@ -16,6 +16,7 @@ function Projects() {
     "C++": "#e74c3c",
     "Embedded C": "#ff9f43",
     Verilog: "#a55eea",
+    SystemVerilog: "#9b51e0",
     "Multi-Agent Systems": "#9b59b6",
     "Reinforcement Learning": "#fd79a8",
     "Raspberry Pi": "#fdcb6e",
@@ -31,6 +32,9 @@ function Projects() {
     SSA: "#a55eea",
     "Register Allocation": "#26de81",
     "Compiler Design": "#ff4757",
+    "RISC-V": "#00b894",
+    "Computer Architecture": "#0984e3",
+    "Out-of-Order Execution": "#6c5ce7",
   };
 
   const projects = [
@@ -50,6 +54,17 @@ function Projects() {
     //   description:
     //     "Full restoration and modification of a classic car with modern upgrades",
     // },
+    {
+      id: 12,
+      title: "Out-of-Order RISC-V Processor",
+      image: "/images/mp_ooo_diagram.png",
+      tags: ["SystemVerilog", "RISC-V", "Computer Architecture"],
+      description:
+        "High-performance out-of-order microprocessor implementing RV32IM with dynamic scheduling, register renaming, and speculative execution",
+      imagePosition: null,
+      slug: "ooo-riscv",
+      date: "Fall 2025",
+    },
     {
       id: 3,
       title: "MRNAV: Multi-Robot Aware Planning and Control Stack",

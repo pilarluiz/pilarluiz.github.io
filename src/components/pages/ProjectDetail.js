@@ -4,6 +4,88 @@ import "./ProjectDetail.css";
 
 // Import project data - we'll move this to a shared file later
 const projectsData = {
+  "gpt2-inference": {
+    id: 13,
+    title: "GPU-Accelerated GPT-2 Transformer Inference",
+    image: "/images/Full_GPT_architecture.png",
+    date: "Fall 2025", // October - December 2025
+    overview:
+      "High-performance GPU-accelerated implementation of GPT-2 transformer inference using CUDA. This ECE 408 final project optimized the forward pass of the GPT-2 language model, transforming a baseline CPU implementation into a highly optimized GPU implementation leveraging advanced parallel programming techniques.",
+    courseLink: null, // ECE 408 course link if available
+    videoLink: null, // YouTube link if available
+    stackImage: null, // Architecture diagram if available
+    imageClass: null, // Optional custom sizing
+    detailedOverview: `The goal of this project was to accelerate GPT-2's inference (forward pass) on NVIDIA GPUs using CUDA, achieving significant speedup over the baseline CPU implementation. GPT-2 is a transformer-based language model that requires substantial computational resources for inference, making GPU optimization critical for practical deployment. The challenge was to implement all core transformer operations from scratch while maximizing GPU utilization and memory efficiency.
+
+The team implemented all the core GPT-2 transformer kernels from scratch in CUDA, including matrix multiplications, layer normalization, attention mechanisms, and feed-forward networks. Over the course of the project, we implemented advanced optimizations for performance and memory efficiency. We profiled the results with NVIDIA's NSight Compute to measure the effectiveness.`,
+    techStack: ["CUDA", "C++", "Python", "GPT-2", "CUTLASS", "cuBLAS"],
+    optimizations: [
+      {
+        name: "Register Tiling + Shared Memory Tiling",
+        description:
+          "Implemented register and shared memory tiling strategies for matrix multiplication to maximize data reuse and minimize memory bandwidth",
+      },
+      {
+        name: "Tensor Core Utilization (TF32 Precision)",
+        description:
+          "Leveraged NVIDIA Tensor Cores with TF32 precision for accelerated matrix operations on Ampere and newer architectures",
+      },
+      {
+        name: "cuBLAS Integration",
+        description:
+          "Integrated cuBLAS library for high-performance matrix multiplications on modern NVIDIA GPUs",
+      },
+      {
+        name: "Reduction Optimization",
+        description:
+          "Applied optimized reduction techniques for efficient parallel sum operations across thread blocks",
+      },
+      {
+        name: "Flash Attention (IO-Aware Tiling)",
+        description:
+          "Implemented Flash Attention with IO-aware tiling strategies to reduce memory bandwidth requirements and improve computation efficiency",
+      },
+      {
+        name: "Configuration Sweep",
+        description:
+          "Performed systematic exploration of block sizes, thread counts, and loop unrolling parameters to find optimal kernel configurations",
+      },
+      {
+        name: "Constant Memory Optimization",
+        description:
+          "Utilized constant memory for frequently accessed data to reduce global memory bandwidth and improve cache efficiency",
+      },
+      {
+        name: "__restrict__ Keyword",
+        description:
+          "Applied __restrict__ keyword for pointer aliasing hints to enable compiler optimizations",
+      },
+      {
+        name: "Windowed/Local Attention",
+        description:
+          "Implemented attention with limited context windows to reduce quadratic complexity for longer sequences",
+      },
+      {
+        name: "Split-K GEMM Decomposition",
+        description:
+          "Decomposed GEMM operations across the K dimension to increase parallelism and improve GPU utilization",
+      },
+      {
+        name: "KV Cache System",
+        description:
+          "Cached key-value pairs from previous tokens to avoid redundant computation during autoregressive generation",
+      },
+      {
+        name: "CUTLASS Integration",
+        description:
+          "Leveraged NVIDIA's CUTLASS library for highly optimized GEMM operations utilizing tensor cores",
+      },
+    ],
+    paperLink: null, // Link to Flash Attention paper or project write-up
+    githubLink: null, // Link to GitHub repo if available/allowed
+    reportLink: "/documents/ECE408_Milestone_3_Report.pdf", // Link to project report
+    liveDemo: null, // Not applicable for GPU optimization project
+  },
   "ooo-riscv": {
     id: 12,
     title: "Out-of-Order RISC-V Processor",
@@ -537,6 +619,24 @@ function ProjectDetail() {
             <section className="project-section">
               <h2>Overview</h2>
               <p className="detailed-overview">{project.detailedOverview}</p>
+            </section>
+          )}
+
+          {project.optimizations && (
+            <section className="project-section">
+              <h2>Optimizations</h2>
+              <div className="optimizations-list">
+                {project.optimizations.map((opt, index) => (
+                  <div key={index} className="optimization-item">
+                    <div className="optimization-name">{opt.name}</div>
+                    <ul>
+                      <li className="optimization-description">
+                        {opt.description}
+                      </li>
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </section>
           )}
 

@@ -35,6 +35,9 @@ function Projects() {
     "RISC-V": "#00b894",
     "Computer Architecture": "#0984e3",
     "Out-of-Order Execution": "#6c5ce7",
+    CUDA: "#76b900",
+    cuBLAS: "#76b900",
+    CUTLASS: "#76b900",
   };
 
   const projects = [
@@ -54,6 +57,17 @@ function Projects() {
     //   description:
     //     "Full restoration and modification of a classic car with modern upgrades",
     // },
+    {
+      id: 13,
+      title: "GPU-Accelerated GPT-2 Transformer Inference",
+      image: "/images/Full_GPT_architecture.png",
+      tags: ["CUDA", "C++", "Machine Learning"],
+      description:
+        "High-performance GPU-accelerated GPT-2 transformer inference with Flash Attention, KV caching, and CUTLASS optimizations",
+      imagePosition: null,
+      slug: "gpt2-inference",
+      date: "Fall 2025",
+    },
     {
       id: 12,
       title: "Out-of-Order RISC-V Processor",

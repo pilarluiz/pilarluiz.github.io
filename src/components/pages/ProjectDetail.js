@@ -318,6 +318,15 @@ function ProjectDetail() {
             </section>
           )}
 
+          {project.advancedFeaturesContent && (
+            <section className="project-section">
+              <h2>Advanced Features</h2>
+              <p className="detailed-overview">
+                {project.advancedFeaturesContent}
+              </p>
+            </section>
+          )}
+
           {project.stackImage && (
             <section className="project-section">
               <h2>System Architecture</h2>

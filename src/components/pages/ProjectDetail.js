@@ -251,7 +251,7 @@ function ProjectDetail() {
                 className="project-video"
               ></iframe>
             </div>
-          ) : projectId !== "uscc" ? (
+          ) : projectId !== "uscc" && projectId !== "digital-thermostat" ? (
             <img
               src={project.image}
               alt={project.title}

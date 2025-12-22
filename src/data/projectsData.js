@@ -6,6 +6,7 @@ import uscc from "./projects/uscc";
 import internetworking from "./projects/internetworking";
 import sleepRight from "./projects/sleep-right";
 import sudoku from "./projects/sudoku";
+import digitalThermostat from "./projects/digital-thermostat";
 import wizardsChess from "./projects/wizards-chess";
 import scheduleGurus from "./projects/schedule-gurus";
 import qdMarl from "./projects/qd-marl";
@@ -20,6 +21,7 @@ const projectsData = {
   internetworking: internetworking,
   "sleep-right": sleepRight,
   sudoku: sudoku,
+  "digital-thermostat": digitalThermostat,
   "wizards-chess": wizardsChess,
   "schedule-gurus": scheduleGurus,
   "qd-marl": qdMarl,

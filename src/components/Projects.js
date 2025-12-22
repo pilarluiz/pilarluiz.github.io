@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Projects.css";
+import projectsData from "../data/projectsData";
 
 function Projects() {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ function Projects() {
     "C++": "#e74c3c",
     "Embedded C": "#ff9f43",
     Verilog: "#a55eea",
+    SystemVerilog: "#9b51e0",
     "Multi-Agent Systems": "#9b59b6",
     "Reinforcement Learning": "#fd79a8",
     "Raspberry Pi": "#fdcb6e",
@@ -25,102 +27,24 @@ function Projects() {
     VGA: "#fd79a8",
     ROS: "#f39c12",
     ATMega328P: "#e84393",
+    LLVM: "#1857b6",
+    Flex: "#ff6b35",
+    "Recursive Descent Parsing": "#ff9f43",
+    SSA: "#a55eea",
+    "Register Allocation": "#26de81",
+    "Compiler Design": "#ff4757",
+    "RISC-V": "#00b894",
+    "Computer Architecture": "#0984e3",
+    "Out-of-Order Execution": "#6c5ce7",
+    CUDA: "#76b900",
+    cuBLAS: "#76b900",
+    CUTLASS: "#76b900",
   };
 
-  const projects = [
-    // {
-    //   id: 1,
-    //   title: "1997 Mazda Miata",
-    //   image: "/images/car-project.jpg",
-    //   tags: ["Electronics", "Mechanical"],
-    //   description:
-    //     "Full restoration and modification of a classic car with modern upgrades",
-    // },
-    // {
-    //   id: 2,
-    //   title: "Espresso Machine",
-    //   image: "/images/",
-    //   tags: ["Electronics", "Mechanical"],
-    //   description:
-    //     "Full restoration and modification of a classic car with modern upgrades",
-    // },
-    {
-      id: 3,
-      title: "MRNAV: Multi-Robot Aware Planning and Control Stack",
-      image: "https://img.youtube.com/vi/6WC0YCEctoE/maxresdefault.jpg",
-      tags: ["C++", "ROS", "Multi-Agent Systems"],
-      description:
-        "Multi-robot collision and deadlock-free navigation system for cluttered environments with hierarchical planning and control",
-      videoLink: "https://www.youtube.com/watch?v=6WC0YCEctoE",
-      slug: "mrnav", // URL slug for routing
-      date: "2022 - 2023",
-    },
-    {
-      id: 4,
-      title: "Sleep Right (Senior Capstone)",
-      image: "/images/sleep-right.png",
-      tags: ["Embedded C", "ATMega328P"],
-      description:
-        "Full restoration and modification of a classic car with modern upgrades",
-      imagePosition: "zoom-out-simple", // Add zoom-out for smaller display
-      slug: "sleep-right", // URL slug for routing
-      date: "Spring 2023",
-    },
-    // TODO: Add distributed systems class project?
-    // {
-    //   id: 5,
-    //   title: "Personal Portfolio Website",
-    //   image: "/images/portfolio-screenshot.jpg",
-    //   tags: ["Web Development", "React"],
-    //   description:
-    //     "Modern responsive portfolio website showcasing professional experience, projects, and skills with clean UI/UX design",
-    // },
-    {
-      id: 9,
-      title: "Sindoku: FPGA Sudoku Game",
-      image: "/images/sudoku.PNG",
-      tags: ["Verilog", "FPGA", "VGA"],
-      description: "TODO",
-      imagePosition: "zoom-out-simple", // Simple zoom out with border
-      slug: "sudoku", // URL slug for routing
-      date: "Spring 2021",
-    },
-    {
-      id: 6,
-      title: "Wizard's Chess",
-      image: "/images/WizardChess.jpeg",
-      tags: ["Python", "Raspberry Pi", "React"],
-      description:
-        "Autonomous robot system with sensor integration and control algorithms",
-      slug: "wizards-chess", // URL slug for routing
-      date: "Fall 2020 - Spring 2021",
-    },
-    {
-      id: 7,
-      title: "Quality-Diversity Multi-Agent Reinforcement Learning",
-      image: "/images/qd-ma-rl.gif",
-      tags: ["Python", "Machine Learning", "Reinforcement Learning"],
-      description: "TODO",
-      slug: "qd-marl", // URL slug for routing
-      date: "Summer 2020",
-    },
-    // {
-    //   id: 8,
-    //   title: "Backyard Halfpipe",
-    //   image: "/images/halfpipe.png",
-    //   tags: ["Mechanical"],
-    //   description: "TODO",
-    // },
-    {
-      id: 10,
-      title: "Schedule Gurus",
-      image: "/images/ScheduleGurus.png",
-      tags: ["JavaScript", "Java", "Python"],
-      description: "TODO",
-      slug: "schedule-gurus", // URL slug for routing
-      date: "Fall 2020",
-    },
-  ];
+  // Convert projectsData object to array and filter out projects without slugs
+  const projects = Object.values(projectsData).filter(
+    (project) => project.slug
+  );
 
   // Display all projects (no filtering)
   const filteredProjects = projects;

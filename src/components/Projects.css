@@ -14,7 +14,7 @@
 
 .projects-header {
   color: white;
-  font-size: 60px;
+  font-size: 50px;
   font-family: "Luckiest Guy", serif;
   font-weight: 400;
   font-style: normal;
@@ -186,7 +186,7 @@
 
 .project-title {
   color: #333333;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 12px;
   font-family: "Questrial", serif;
@@ -194,7 +194,7 @@
 
 .project-date {
   color: #333333;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
   margin-bottom: 16px;
   font-family: "Questrial", serif;
@@ -214,7 +214,7 @@
   color: #9b59b6;
   padding: 6px 12px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.5px;
   border: 2px solid #9b59b6;

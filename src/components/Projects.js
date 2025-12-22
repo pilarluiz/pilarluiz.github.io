@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Projects.css";
+import projectsData from "../data/projectsData";
 
 function Projects() {
   const navigate = useNavigate();
@@ -40,132 +41,10 @@ function Projects() {
     CUTLASS: "#76b900",
   };
 
-  const projects = [
-    // {
-    //   id: 1,
-    //   title: "1997 Mazda Miata",
-    //   image: "/images/car-project.jpg",
-    //   tags: ["Electronics", "Mechanical"],
-    //   description:
-    //     "Full restoration and modification of a classic car with modern upgrades",
-    // },
-    // {
-    //   id: 2,
-    //   title: "Espresso Machine",
-    //   image: "/images/",
-    //   tags: ["Electronics", "Mechanical"],
-    //   description:
-    //     "Full restoration and modification of a classic car with modern upgrades",
-    // },
-    {
-      id: 13,
-      title: "GPU-Accelerated GPT-2 Transformer Inference",
-      image: "/images/Full_GPT_architecture.png",
-      tags: ["CUDA", "C++", "Machine Learning"],
-      description:
-        "High-performance GPU-accelerated GPT-2 transformer inference with Flash Attention, KV caching, and CUTLASS optimizations",
-      imagePosition: null,
-      slug: "gpt2-inference",
-      date: "Fall 2025",
-    },
-    {
-      id: 12,
-      title: "Out-of-Order RISC-V Processor",
-      image: "/images/mp_ooo_diagram.png",
-      tags: ["SystemVerilog", "RISC-V", "Computer Architecture"],
-      description:
-        "High-performance out-of-order microprocessor implementing RV32IM with dynamic scheduling, register renaming, and speculative execution",
-      imagePosition: null,
-      slug: "ooo-riscv",
-      date: "Fall 2025",
-    },
-    {
-      id: 3,
-      title: "MRNAV: Multi-Robot Aware Planning and Control Stack",
-      image: "https://img.youtube.com/vi/6WC0YCEctoE/maxresdefault.jpg",
-      tags: ["C++", "ROS", "Multi-Agent Systems"],
-      description:
-        "Multi-robot collision and deadlock-free navigation system for cluttered environments with hierarchical planning and control",
-      videoLink: "https://www.youtube.com/watch?v=6WC0YCEctoE",
-      slug: "mrnav", // URL slug for routing
-      date: "2022 - 2023",
-    },
-    {
-      id: 11,
-      title: "USCC – University Simple C Compiler",
-      image: "/images/uscc.png",
-      tags: ["C++", "LLVM", "Compiler Design"],
-      description:
-        "A simple C compiler built using LLVM for educational purposes",
-      slug: "uscc",
-      date: "Spring 2022",
-    },
-    {
-      id: 4,
-      title: "Sleep Right (Senior Capstone)",
-      image: "/images/sleep-right.png",
-      tags: ["Embedded C", "ATMega328P"],
-      description:
-        "Full restoration and modification of a classic car with modern upgrades",
-      imagePosition: "zoom-out-simple", // Add zoom-out for smaller display
-      slug: "sleep-right", // URL slug for routing
-      date: "Spring 2023",
-    },
-    // TODO: Add distributed systems class project?
-    // {
-    //   id: 5,
-    //   title: "Personal Portfolio Website",
-    //   image: "/images/portfolio-screenshot.jpg",
-    //   tags: ["Web Development", "React"],
-    //   description:
-    //     "Modern responsive portfolio website showcasing professional experience, projects, and skills with clean UI/UX design",
-    // },
-    {
-      id: 9,
-      title: "Sindoku: FPGA Sudoku Game",
-      image: "/images/sudoku.PNG",
-      tags: ["Verilog", "FPGA", "VGA"],
-      description: "TODO",
-      imagePosition: "zoom-out-simple", // Simple zoom out with border
-      slug: "sudoku", // URL slug for routing
-      date: "Spring 2021",
-    },
-    {
-      id: 6,
-      title: "Wizard's Chess",
-      image: "/images/WizardChess.jpeg",
-      tags: ["Python", "Raspberry Pi", "React"],
-      description:
-        "Autonomous robot system with sensor integration and control algorithms",
-      slug: "wizards-chess", // URL slug for routing
-      date: "Fall 2020 - Spring 2021",
-    },
-    {
-      id: 7,
-      title: "Quality-Diversity Multi-Agent Reinforcement Learning",
-      image: "/images/qd-ma-rl.gif",
-      tags: ["Python", "Machine Learning", "Reinforcement Learning"],
-      description: "TODO",
-      slug: "qd-marl", // URL slug for routing
-      date: "Summer 2020",
-    },
-    // {
-    //   id: 8,
-    //   title: "Backyard Halfpipe",
-    //   image: "/images/halfpipe.png",
-    //   tags: ["Mechanical"],
-    //   description: "TODO",
-    // },
-    {
-      id: 10,
-      title: "Schedule Gurus",
-      image: "/images/ScheduleGurus.png",
-      tags: ["JavaScript", "Java", "Python"],
-      description: "TODO",
-      slug: "schedule-gurus", // URL slug for routing
-      date: "Fall 2020",
-    },
-  ];
+  // Convert projectsData object to array and filter out projects without slugs
+  const projects = Object.values(projectsData).filter(
+    (project) => project.slug
+  );
 
   // Display all projects (no filtering)
   const filteredProjects = projects;

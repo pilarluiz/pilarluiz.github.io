@@ -15,72 +15,69 @@ const projectsData = {
     videoLink: null, // YouTube link if available
     stackImage: null, // Architecture diagram if available
     imageClass: null, // Optional custom sizing
-    detailedOverview: `The goal of this project was to accelerate GPT-2's inference (forward pass) on NVIDIA GPUs using CUDA, achieving significant speedup over the baseline CPU implementation. GPT-2 is a transformer-based language model that requires substantial computational resources for inference, making GPU optimization critical for practical deployment. The challenge was to implement all core transformer operations from scratch while maximizing GPU utilization and memory efficiency.
+    detailedOverview: `As part of UIUC's ECE 408 Applied Parallel Programming course, our team implemented all GPT-2 transformer kernels in CUDA for high-performance inference on NVIDIA GPUs. GPT-2 is a transformer-based language model that demands significant computational resources for inference, making GPU optimization critical for practical deployment.
 
-The team implemented all the core GPT-2 transformer kernels from scratch in CUDA, including matrix multiplications, layer normalization, attention mechanisms, and feed-forward networks. Over the course of the project, we implemented advanced optimizations for performance and memory efficiency. We profiled the results with NVIDIA's NSight Compute to measure the effectiveness.`,
-    techStack: ["CUDA", "C++", "Python", "GPT-2", "CUTLASS", "cuBLAS"],
-    optimizations: [
-      {
-        name: "Register Tiling + Shared Memory Tiling",
-        description:
-          "Implemented register and shared memory tiling strategies for matrix multiplication to maximize data reuse and minimize memory bandwidth",
-      },
-      {
-        name: "Tensor Core Utilization (TF32 Precision)",
-        description:
-          "Leveraged NVIDIA Tensor Cores with TF32 precision for accelerated matrix operations on Ampere and newer architectures",
-      },
-      {
-        name: "cuBLAS Integration",
-        description:
-          "Integrated cuBLAS library for high-performance matrix multiplications on modern NVIDIA GPUs",
-      },
-      {
-        name: "Reduction Optimization",
-        description:
-          "Applied optimized reduction techniques for efficient parallel sum operations across thread blocks",
-      },
-      {
-        name: "Flash Attention (IO-Aware Tiling)",
-        description:
-          "Implemented Flash Attention with IO-aware tiling strategies to reduce memory bandwidth requirements and improve computation efficiency",
-      },
-      {
-        name: "Configuration Sweep",
-        description:
-          "Performed systematic exploration of block sizes, thread counts, and loop unrolling parameters to find optimal kernel configurations",
-      },
-      {
-        name: "Constant Memory Optimization",
-        description:
-          "Utilized constant memory for frequently accessed data to reduce global memory bandwidth and improve cache efficiency",
-      },
-      {
-        name: "__restrict__ Keyword",
-        description:
-          "Applied __restrict__ keyword for pointer aliasing hints to enable compiler optimizations",
-      },
-      {
-        name: "Windowed/Local Attention",
-        description:
-          "Implemented attention with limited context windows to reduce quadratic complexity for longer sequences",
-      },
-      {
-        name: "Split-K GEMM Decomposition",
-        description:
-          "Decomposed GEMM operations across the K dimension to increase parallelism and improve GPU utilization",
-      },
-      {
-        name: "KV Cache System",
-        description:
-          "Cached key-value pairs from previous tokens to avoid redundant computation during autoregressive generation",
-      },
-      {
-        name: "CUTLASS Integration",
-        description:
-          "Leveraged NVIDIA's CUTLASS library for highly optimized GEMM operations utilizing tensor cores",
-      },
-    ],
+We built all core transformer operations from scratch in CUDA, including matrix multiplications, layer normalization, attention mechanisms, and feed-forward networks. The implementation progressed through multiple milestones, each introducing new optimization techniques to maximize GPU utilization and memory efficiency.
+
+Throughout development, we utilized Nsight Systems and Nsight Compute for comprehensive profiling and performance analysis, enabling data-driven optimization decisions. The final implementation demonstrated significant performance improvements while maintaining numerical accuracy, successfully bridging the gap between theoretical GPU capabilities and practical transformer inference performance.`,
+    techStack: ["CUDA", "C++", "GPT-2", "Profiling"],
+    optimizationsContent: (
+      <>
+        <strong>Register Tiling + Shared Memory Tiling:</strong> Implemented
+        register and shared memory tiling strategies for matrix multiplication
+        to maximize data reuse and minimize memory bandwidth
+        <br />
+        <br />
+        <strong>Tensor Core Utilization (TF32 Precision):</strong> Leveraged
+        NVIDIA Tensor Cores with TF32 precision for accelerated matrix
+        operations on Ampere and newer architectures
+        <br />
+        <br />
+        <strong>cuBLAS Integration:</strong> Integrated cuBLAS library for
+        high-performance matrix multiplications on modern NVIDIA GPUs
+        <br />
+        <br />
+        <strong>Reduction Optimization:</strong> Applied optimized reduction
+        techniques for efficient parallel sum operations across thread blocks
+        <br />
+        <br />
+        <strong>Flash Attention (IO-Aware Tiling):</strong> Implemented Flash
+        Attention with IO-aware tiling strategies to reduce memory bandwidth
+        requirements and improve computation efficiency
+        <br />
+        <br />
+        <strong>Configuration Sweep:</strong> Performed systematic exploration
+        of block sizes, thread counts, and loop unrolling parameters to find
+        optimal kernel configurations
+        <br />
+        <br />
+        <strong>Constant Memory Optimization:</strong> Utilized constant memory
+        for frequently accessed data to reduce global memory bandwidth and
+        improve cache efficiency
+        <br />
+        <br />
+        <strong>__restrict__ Keyword:</strong> Applied __restrict__ keyword for
+        pointer aliasing hints to enable compiler optimizations
+        <br />
+        <br />
+        <strong>Windowed/Local Attention:</strong> Implemented attention with
+        limited context windows to reduce quadratic complexity for longer
+        sequences
+        <br />
+        <br />
+        <strong>Split-K GEMM Decomposition:</strong> Decomposed GEMM operations
+        across the K dimension to increase parallelism and improve GPU
+        utilization
+        <br />
+        <br />
+        <strong>KV Cache System:</strong> Cached key-value pairs from previous
+        tokens to avoid redundant computation during autoregressive generation
+        <br />
+        <br />
+        <strong>CUTLASS Integration:</strong> Leveraged NVIDIA's CUTLASS library
+        for highly optimized GEMM operations utilizing tensor cores
+      </>
+    ),
     paperLink: null, // Link to Flash Attention paper or project write-up
     githubLink: null, // Link to GitHub repo if available/allowed
     reportLink: "/documents/ECE408_Milestone_3_Report.pdf", // Link to project report
@@ -619,6 +616,15 @@ function ProjectDetail() {
             <section className="project-section">
               <h2>Overview</h2>
               <p className="detailed-overview">{project.detailedOverview}</p>
+            </section>
+          )}
+
+          {project.optimizationsContent && (
+            <section className="project-section">
+              <h2>Optimizations</h2>
+              <p className="detailed-overview">
+                {project.optimizationsContent}
+              </p>
             </section>
           )}
 

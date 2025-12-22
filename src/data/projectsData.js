@@ -3,6 +3,7 @@ import gpt2Inference from "./projects/gpt2-inference";
 import oooRiscv from "./projects/ooo-riscv";
 import mrnav from "./projects/mrnav";
 import uscc from "./projects/uscc";
+import internetworking from "./projects/internetworking";
 import sleepRight from "./projects/sleep-right";
 import sudoku from "./projects/sudoku";
 import wizardsChess from "./projects/wizards-chess";
@@ -16,6 +17,7 @@ const projectsData = {
   "ooo-riscv": oooRiscv,
   mrnav: mrnav,
   uscc: uscc,
+  internetworking: internetworking,
   "sleep-right": sleepRight,
   sudoku: sudoku,
   "wizards-chess": wizardsChess,

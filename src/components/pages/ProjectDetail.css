@@ -136,6 +136,15 @@
   display: block;
 }
 
+.internetworking-image {
+  width: 70% !important;
+  margin: 0 auto;
+  display: block;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
 .project-detail-body {
   color: white;
   font-family: "Questrial", serif;

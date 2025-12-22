@@ -81,7 +81,7 @@ Throughout development, we utilized Nsight Systems and Nsight Compute for compre
   tags: ["CUDA", "C++", "Machine Learning"],
   description:
     "High-performance GPU-accelerated GPT-2 transformer inference with Flash Attention, KV caching, and CUTLASS optimizations",
-  imagePosition: null,
+  imagePosition: "zoom-out-simple",
 };
 
 export default gpt2Inference;
